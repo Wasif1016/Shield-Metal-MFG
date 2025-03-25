@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from '@/components/sections/Navbar';
 import SmoothScrolling from "@/components/Smooth-scrolling";
+import Footer from "@/components/sections/footer";
 
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({
           <SmoothScrolling>
             <Navbar />
             {children}
+            <Footer />
           </SmoothScrolling>
         </ThemeProvider>
       </body>
