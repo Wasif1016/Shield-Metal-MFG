@@ -3,7 +3,7 @@ import { GeistSans } from 'geist/font/sans';
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from '@/components/sections/Navbar';
-
+import SmoothScrolling from "@/components/Smooth-scrolling";
 
 
 export const metadata: Metadata = {
@@ -25,8 +25,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          {children}
+          <SmoothScrolling>
+            <Navbar />
+            {children}
+          </SmoothScrolling>
         </ThemeProvider>
       </body>
     </html>

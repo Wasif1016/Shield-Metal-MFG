@@ -3,6 +3,7 @@ import Products from "@/components/sections/Products";
 import { SuccessStories } from "@/components/sections/Testimonial";
 import Contact from "@/components/sections/Contact";
 import { Testimonials } from "@/components/ui/testimonials";
+import Footer from "@/components/sections/footer";
 
 
 export default function Home() {
@@ -12,9 +13,7 @@ export default function Home() {
       <Products />
       <SuccessStories/>
       <Contact />
-      <div className="block">
-      <Testimonials />
-    </div>
+      <Footer />
     </>
   );
 }

@@ -87,7 +87,7 @@ function TestimonialCard({ testimonial, index }: TestimonialCardProps) {
       transition={{ delay: index * 0.1 }}
       className="group"
     >
-      <div className="h-full p-6 rounded-2xl border border-gray-700 bg-gray-900/80 backdrop-blur-sm hover:border-primary/20 transition-all duration-500">
+      <div className="h-full p-6 rounded-2xl border border-border bg-gradient-to-br from-zinc-950 to-zinc-900 backdrop-blur-sm hover:border-primary/20 transition-all duration-500">
         {/* Quote Icon */}
         <div className="mb-6">
           <Quote className="w-10 h-10 text-primary/60" />
@@ -108,12 +108,12 @@ function TestimonialCard({ testimonial, index }: TestimonialCardProps) {
         </div>
 
         {/* Author */}
-        <div className="flex items-center gap-4 mt-6 pt-6 border-t border-gray-700">
+        {/* <div className="flex items-center gap-4 mt-6 pt-6 border-t border-gray-700">
           <div>
             <h4 className="font-semibold text-white">{testimonial.name}</h4>
             <p className="text-sm text-gray-400">{testimonial.role}</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </motion.div>
   )

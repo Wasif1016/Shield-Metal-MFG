@@ -1,194 +1,125 @@
-import Image from 'next/image';
+'use client';
 
-// Import icons from react-icons
-import { GiChemicalDrop } from 'react-icons/gi';
-import { MdOutlineSettings } from 'react-icons/md';
-import { BiShieldQuarter } from 'react-icons/bi';
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function Products() {
+  const products = [
+    {
+      name: 'Stainless Steel Elbows',
+      image: '/Stainless+Steel+45+-+Shield+Metal+DS.png',
+      features: [
+        'High-quality 0.010 Type 304 & 316 stainless steel',
+        'Available in 90° & 45° long and short radius',
+        'Fits 13mm (1/2") IPS to 300mm (12") IPS',
+        '25mm (1") to 100mm (4") thickness',
+      ],
+    },
+    {
+      name: 'Aluminum Elbows',
+      image: '/Aluminum+90+-+Shield+Metal+DS+homepage.png',
+      features: [
+        'High-quality 1100 alloy in 0.024" thickness (24 gauge)',
+        'Available in 90° & 45°, long and short radius',
+        'Fits 13mm (1/2") IPS to 300mm (12") IPS',
+        '25mm (1") to 100mm (4") thickness',
+      ],
+    },
+    {
+      name: 'Coated Aluminum Elbows',
+      image: '/Stucco+Embossed+90+-+Shield+Metal+DS.png',
+      features: [
+        '1100 Aluminum alloy in 0.024" thickness (24 gauge)',
+        'Smooth and stucco embossed finishes',
+        'Fits 13mm (1/2") IPS to 300mm (12") IPS',
+        '25mm (1") to 100mm (4") thickness',
+      ],
+    },
+  ];
+
   return (
-    <section className="py-24 bg-gradient-to-b from-black to-zinc-950">
+    <section className="py-24 bg-zinc-900">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
             Our Premium Products
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Engineered for excellence, our product line features industry-leading materials 
-            and precise specifications for optimal performance.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Precision-engineered solutions crafted with exceptional materials and meticulous attention to detail.
           </p>
-        </div>
+        </motion.div>
 
         {/* Products Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Stainless Steel Elbows */}
-          <div className="bg-black/50 rounded-2xl p-8 backdrop-blur-sm border border-white/10 
-            hover:border-white/20 transition-all duration-300 group">
-            <div className="aspect-square relative mb-6 rounded-xl overflow-hidden">
-              <Image
-                src="/Stainless+Steel+45+-+Shield+Metal+DS.png"
-                alt="Stainless Steel Elbows"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <GiChemicalDrop className="absolute bottom-4 right-4 w-8 h-8 text-white/80" />
-            </div>
-            
-            <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-              <span>Stainless Steel Elbows</span>
-            </h3>
-
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 mt-2 rounded-full bg-blue-500"></span>
-                <div>
-                  <h4 className="text-gray-300 font-medium mb-1">Material</h4>
-                  <p className="text-gray-400">High-quality 0.010" thickness Type 304 & 316 stainless steel</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 mt-2 rounded-full bg-blue-500"></span>
-                <div>
-                  <h4 className="text-gray-300 font-medium mb-1">Options</h4>
-                  <p className="text-gray-400">Available in 90° & 45°, long and short radius for 90°</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 mt-2 rounded-full bg-blue-500"></span>
-                <div>
-                  <h4 className="text-gray-300 font-medium mb-1">Sizes</h4>
-                  <p className="text-gray-400">Fits 13mm (1/2") IPS to 300mm (12") IPS</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 mt-2 rounded-full bg-blue-500"></span>
-                <div>
-                  <h4 className="text-gray-300 font-medium mb-1">Insulation Compatibility</h4>
-                  <p className="text-gray-400">25mm (1") to 100mm (4") thickness</p>
-                </div>
-              </div>
-            </div>
-
-            <button className="w-full py-4 px-6 bg-white hover:bg-white/20 text-black 
-              rounded-lg transition-all duration-300 group-hover:bg-grey-600">
-              Read More →
-            </button>
-          </div>
-
-          {/* Aluminum Elbows */}
-          <div className="bg-black/50 rounded-2xl p-8 backdrop-blur-sm border border-white/10 
-            hover:border-white/20 transition-all duration-300 group">
-            <div className="aspect-square relative mb-6 rounded-xl overflow-hidden">
-              <Image
-                src="/Aluminum+90+-+Shield+Metal+DS+homepage.png"
-                alt="Aluminum Elbows"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <MdOutlineSettings className="absolute bottom-4 right-4 w-8 h-8 text-white/80" />
-            </div>
-
-            <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-              <span>Aluminum Elbows</span>
-            </h3>
-
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 mt-2 rounded-full bg-blue-500"></span>
-                <div>
-                  <h4 className="text-gray-300 font-medium mb-1">Material</h4>
-                  <p className="text-gray-400">High-quality 1100 alloy in 0.024" thickness (24 gauge)</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 mt-2 rounded-full bg-blue-500"></span>
-                <div>
-                  <h4 className="text-gray-300 font-medium mb-1">Options</h4>
-                  <p className="text-gray-400">Available in 90° & 45°, long and short radius for 90°</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 mt-2 rounded-full bg-blue-500"></span>
-                <div>
-                  <h4 className="text-gray-300 font-medium mb-1">Sizes</h4>
-                  <p className="text-gray-400">Fits 13mm (1/2") IPS to 300mm (12") IPS</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 mt-2 rounded-full bg-blue-500"></span>
-                <div>
-                  <h4 className="text-gray-300 font-medium mb-1">Insulation Compatibility</h4>
-                  <p className="text-gray-400">25mm (1") to 100mm (4") thickness</p>
-                </div>
-              </div>
-            </div>
-
-            <button className="w-full py-4 px-6 bg-white hover:bg-white/20 text-black 
-              rounded-lg transition-all duration-300 group-hover:bg-grey-600">
-              Read More →
-            </button>
-          </div>
-
-          {/* Coated Aluminum Elbows */}
-          <div className="bg-black/50 rounded-2xl p-8 backdrop-blur-sm border border-white/10 
-            hover:border-white/20 transition-all duration-300 group">
-            <div className="aspect-square relative mb-6 rounded-xl overflow-hidden">
-              <Image
-                src="/Stucco+Embossed+90+-+Shield+Metal+DS.png"
-                alt="Coated Aluminum Elbows"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <BiShieldQuarter className="absolute bottom-4 right-4 w-8 h-8 text-white/80" />
-            </div>
-
-            <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-              <span>Coated Aluminum Elbows</span>
-            </h3>
-
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 mt-2 rounded-full bg-blue-500"></span>
-                <div>
-                  <h4 className="text-gray-300 font-medium mb-1">Material</h4>
-                  <p className="text-gray-400">1100 Aluminum alloy in 0.024" thickness (24 gauge)</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 mt-2 rounded-full bg-blue"></span>
-                <div>
-                  <h4 className="text-gray-300 font-medium mb-1">Options</h4>
-                  <p className="text-gray-400">Smooth and stucco embossed finishes</p>
-                </div>
+        <div className="grid md:grid-cols-3 gap-4">
+          {products.map((product, index) => (
+            <motion.div 
+              key={product.name}
+              className="bg-zinc-950 group shadow-lg rounded-2xl overflow-hidden 
+              border border-border hover:shadow-xl transition-all duration-300 
+              transform"
+            >
+              {/* Product Image */}
+              <div className="relative w-full h-64 overflow-hidden">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-contain transition-transform duration-500 
+                  group-hover:scale-110"
+                />
               </div>
               
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 mt-2 rounded-full bg-blue-500"></span>
-                <div>
-                  <h4 className="text-gray-300 font-medium mb-1">Sizes</h4>
-                  <p className="text-gray-400">Fits 13mm (1/2") IPS to 300mm (12") IPS</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 mt-2 rounded-full bg-blue-500"></span>
-                <div>
-                  <h4 className="text-gray-300 font-medium mb-1">Insulation Compatibility</h4>
-                  <p className="text-gray-400">25mm (1") to 100mm (4") thickness</p>
-                </div>
-              </div>
-            </div>
+              {/* Product Content */}
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {product.name}
+                </h3>
 
-            <button className="w-full py-4 px-6 bg-white hover:bg-white/20 text-black 
-              rounded-lg transition-all duration-300 group-hover:bg-grey-600">
-              Read More →
-            </button>
-          </div>
+                {/* Features List */}
+                <ul className="space-y-3 mb-6">
+                  {product.features.map((feature, featureIndex) => (
+                    <li 
+                      key={featureIndex} 
+                      className="flex items-center space-x-3"
+                    >
+                      <svg 
+                        className="w-5 h-5 text-foreground flex-shrink-0" 
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path 
+                          fillRule="evenodd" 
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" 
+                          clipRule="evenodd" 
+                        />
+                      </svg>
+                        <span className="text-muted-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Learn More Button */}
+                <Link 
+                  href="/products" 
+                  className="w-full block text-center py-3 px-6 
+                  bg-foreground text-background rounded-lg 
+                  hover:bg-foreground/80 transition-colors duration-300 
+                  font-semibold"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
   );
-} 
+}
