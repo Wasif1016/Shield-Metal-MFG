@@ -78,7 +78,7 @@ export async function POST(request: Request) {
       throw emailError;
     }
 
-  } catch (error) {
+  } catch (error: any) {
     console.error('API route error:', error);
     return NextResponse.json(
       { error: 'Failed to send email', details: error.message },
