@@ -63,11 +63,11 @@ export default function ContactPage() {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-               <Image src="/other-logo.png" alt="Shield Metal Industries" width={500} height={500} className="w-auto h-auto mx-auto mb-12" />
+               
               <h1 className="text-5xl font-bold text-white mb-6">
                 Let's Connect
               </h1>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto capitalize">
                 Have questions about our products? We're here to help and answer any questions you might have.
               </p>
             </motion.div>

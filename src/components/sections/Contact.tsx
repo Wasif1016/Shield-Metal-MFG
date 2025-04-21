@@ -72,20 +72,44 @@ export default function Contact() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="w-full space-y-8 bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+            className="w-full h-full bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 flex flex-col justify-between"
           >
             <div className="space-y-6">
-            <Image src="/other-logo.png" alt="Shield Metal Industries" width={500} height={500} className="w-auto h-auto" />
+              <Image src="/other-logo.png" alt="Shield Metal Industries" width={500} height={500} className="w-auto h-auto" />
               <h3 className="text-2xl font-semibold text-white">
                 Get in Touch Directly
               </h3>
-              {/* <p className="text-gray-400">
-                We're a family-owned business with over 30 years of experience in metal manufacturing. Our team is committed to delivering top-quality solutions.
-              </p> */}
             </div>
 
             <div className="space-y-6">
-              {/* Contact Methods */}
+              <div className="p-6 bg-zinc-800/50 rounded-xl border border-white/5">
+                <h4 className="text-xl font-semibold text-white mb-4">Eastern & Central USA Customers</h4>
+                <p className="text-gray-400 mb-4">
+                  IF YOU ARE IN THE EASTERN OR CENTRAL USA PLEASE CONTACT CHESNUTT INSULATION DIRECTLY.
+                </p>
+                <div className="space-y-3">
+                  <div>
+                    <span className="text-gray-400">Phone:</span>
+                    <a href="tel:864-457-4121" className="text-blue-400 hover:text-blue-300 ml-2">864-457-4121</a>
+                  </div>
+                  <div>
+                    <span className="text-gray-400">Toll Free:</span>
+                    <a href="tel:1-800-222-5077" className="text-blue-400 hover:text-blue-300 ml-2">1-800-222-5077</a>
+                  </div>
+                  <div>
+                    <span className="text-gray-400">Website:</span>
+                    <a 
+                      href="https://www.chesnuttassociates.com/contact/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-blue-400 hover:text-blue-300 ml-2"
+                    >
+                      www.chesnuttassociates.com/contact/
+                    </a>
+                  </div>
+                </div>
+              </div>
+
               <div className="flex items-center space-x-4">
                 <div className="p-3 bg-zinc-800 rounded-lg">
                   <ClockIcon className="w-6 h-6 text-blue-500" />
@@ -93,34 +117,6 @@ export default function Contact() {
                 <div>
                   <h4 className="text-white font-medium">Working Hours</h4>
                   <p className="text-gray-400">Monday - Friday: 6:30am to 2:45pm PST</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <div className="p-3 bg-zinc-800 rounded-lg">
-                  <MapPinIcon className="w-6 h-6 text-green-500" />
-                </div>
-                <div>
-                  <h4 className="text-white font-medium">Our Location</h4>
-                  <p className="text-gray-400">
-                    12694 82 AVENUE<br />
-                    SURREY, BC V3W 3G1
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <div className="p-3 bg-zinc-800 rounded-lg">
-                  <PhoneIcon className="w-6 h-6 text-purple-500" />
-                </div>
-                <div>
-                  <h4 className="text-white font-medium">Phone</h4>
-                  <a 
-                    href="tel:864-457-4121" 
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
-                  >
-                    864-457-4121
-                  </a>
                 </div>
               </div>
             </div>
@@ -135,7 +131,7 @@ export default function Contact() {
           >
             <form 
               onSubmit={handleSubmit} 
-              className=" bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 
+              className="h-full bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 
               border border-white/10 space-y-6 shadow-2xl"
             >
               <div className="space-y-6">

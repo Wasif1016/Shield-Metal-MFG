@@ -53,7 +53,7 @@ export function SuccessStories() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              What our clients say about Shield Metal Industries
+              What our clients say about us Industries
             </motion.p>
           </div>
 

@@ -5,9 +5,9 @@ import Image from 'next/image';
 import { ChartBarIcon, ClockIcon, UserGroupIcon, TrophyIcon } from '@heroicons/react/24/outline';
 
 const stats = [
-  { id: 1, name: 'Years of Experience', value: '50+', icon: ClockIcon },
-  { id: 2, name: 'Products Manufactured', value: '10,000+', icon: ChartBarIcon },
-  { id: 3, name: 'Satisfied Customers', value: '5,000+', icon: UserGroupIcon },
+  { id: 1, name: 'Years of Experience', value: '56+', icon: ClockIcon },
+  { id: 2, name: 'Products Manufactured', value: '10,0000+', icon: ChartBarIcon },
+  { id: 3, name: 'Satisfied Customers', value: '150000+', icon: UserGroupIcon },
   { id: 4, name: 'Quality Standards', value: '100%', icon: TrophyIcon },
 ];
 
@@ -26,11 +26,11 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
-              About Shield Metal
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight capitalize">
+              About US
             </h1>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Your trusted partner in premium metal manufacturing solutions for over 50 years.
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto capitalize">
+              Your trusted partner in premium metal manufacturing solutions for over 56+ years.
             </p>
           </motion.div>
 
@@ -80,7 +80,7 @@ export default function AboutPage() {
                 </p>
                 
                 <p className="text-lg leading-relaxed">
-                  With over 50 years of doing business, our years of experience and commitment to you, 
+                  With over 56+ years of doing business, our years of experience and commitment to you, 
                   our customers, ensures you will receive fast, friendly and efficient service - all the time, 
                   every time.
                 </p>
@@ -173,7 +173,7 @@ export default function AboutPage() {
               },
               {
                 title: 'Experience',
-                description: '50+ years of expertise in metal manufacturing solutions.',
+                description: '56+ years of expertise in metal manufacturing solutions.',
                 icon: ClockIcon,
               },
             ].map((value, index) => (

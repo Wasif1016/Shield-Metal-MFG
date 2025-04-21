@@ -10,7 +10,7 @@ export default function ProductsPage() {
       category: "Stainless Steel",
       variants: [
         {
-          type: "304 Stainless Steel",
+          type: "304L Stainless Steel",
           angles: [
             {
               name: "45° Elbow",
@@ -123,11 +123,11 @@ export default function ProductsPage() {
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/20 text-primary text-sm mb-6">
-              <ShieldCheckIcon className="w-5 h-5 mr-2" />
+              <ShieldCheckIcon className="w-5 h-5 mr-2 capitalize" />
               North American Made Quality
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">HVAC Elbow Solutions</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4 capitalize">HVAC Elbow Solutions</h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto capitalize">
               Premium stainless steel and aluminum elbows engineered for durability and performance
             </p>
           </motion.div>
@@ -159,7 +159,7 @@ export default function ProductsPage() {
                         <h3 className="text-2xl font-bold text-foreground">{variant.type}</h3>
                         <div className="flex items-center mt-2">
                           <span className="text-sm bg-primary/10 text-primary px-2 py-1 rounded mr-2">{variant.thickness}</span>
-                          <span className="text-sm bg-muted text-muted-foreground px-2 py-1 rounded">{product.category === "Stainless Steel" ? "T-304/316" : "1100 Alloy"}</span>
+                          <span className="text-sm bg-muted text-muted-foreground px-2 py-1 rounded">{product.category === "Stainless Steel" ? "T-304L / 316L" : "1100 Alloy"}</span>
                         </div>
                       </div>
                       <div className="p-2 bg-primary/10 rounded-lg">
@@ -238,7 +238,7 @@ export default function ProductsPage() {
                 </thead>
                 <tbody className="bg-card divide-y divide-border">
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-foreground">304 Stainless Steel</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-foreground">304L Stainless Steel</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-muted-foreground">0.010"</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-muted-foreground">45°, 90°</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-muted-foreground">1/2" - 12"</td>

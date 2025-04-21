@@ -45,7 +45,7 @@ export default function Navbar() {
           {/* <div className="flex-shrink-0">
             <Link href="/" onClick={closeMenu}>
               <Image
-                src="/logo.jpeg"
+                src="/logo.jpg"
                 alt="Shield Metal Logo"
                 width={40}
                 height={40}

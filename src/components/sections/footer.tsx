@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="md:col-span-1 max-w-xs">
             <div className="flex items-center space-x-3 mb-4">
               <Image 
-                src="/logo.jpeg" 
+                src="/logo.jpg" 
                 alt="Shield Metal Logo" 
                 width={50} 
                 height={50} 
@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
 
           {/* Social Media */}
-          <div className="md:col-span-1">
+          {/* <div className="md:col-span-1">
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4">
               <a 
@@ -64,7 +64,7 @@ export default function Footer() {
                 <FaTwitter className="w-6 h-6" />
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Copyright and Legal */}

@@ -29,10 +29,10 @@ export default function SizeGuidePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl font-bold text-white mb-4 tracking-tight">
+            <h1 className="text-4xl font-bold text-white mb-4 tracking-tight capitalize">
               Product Size Guide
             </h1>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto capitalize">
               Complete sizing information for our Stainless Steel & Aluminium products
             </p>
           </motion.div>
@@ -101,11 +101,7 @@ export default function SizeGuidePage() {
                     </li>
                     <li className="flex items-center gap-2">
                       <ArrowRightIcon className="w-3 h-3 text-green-500" />
-                      <span>45° in Smooth & Stucco embossed</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <ArrowRightIcon className="w-3 h-3 text-green-500" />
-                      <span>Smooth & Embossed</span>
+                      <span>45° in Smooth & Embossed</span>
                     </li>
                   </ul>
                 </div>
