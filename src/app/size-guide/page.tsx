@@ -19,7 +19,7 @@ export default function SizeGuidePage() {
   return (
     <main className="bg-black min-h-screen">
       {/* Hero Section - More Compact */}
-      <section className="relative py-16 md:pt-36 overflow-hidden">
+      <section className="relative py-16 md:pt-20 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
         
         <div className="max-w-6xl mx-auto px-4 relative">
@@ -58,7 +58,7 @@ export default function SizeGuidePage() {
                   <h2 className="text-xl font-semibold text-white">Stainless Steel</h2>
                 </div>
                 <div className="space-y-2 text-sm text-gray-400">
-                  <p>Available in T-316 & T-304 for:</p>
+                  <p>Available in T-316L & T-304L for:</p>
                   <ul className="space-y-1.5">
                     <li className="flex items-center gap-2">
                       <ArrowRightIcon className="w-3 h-3 text-blue-500" />
@@ -102,6 +102,10 @@ export default function SizeGuidePage() {
                     <li className="flex items-center gap-2">
                       <ArrowRightIcon className="w-3 h-3 text-green-500" />
                       <span>45° in Smooth & Stucco embossed</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <ArrowRightIcon className="w-3 h-3 text-green-500" />
+                      <span>Smooth & Embossed</span>
                     </li>
                   </ul>
                 </div>

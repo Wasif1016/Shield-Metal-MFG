@@ -3,8 +3,8 @@ import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 
 interface CountUpProps {
-    to: number;
-    from?: number;
+    to: number | string;
+    from?: number | string;
     direction?: "up" | "down";
     delay?: number;
     duration?: number;
@@ -28,7 +28,12 @@ export default function CountUp({
     onEnd,
 }: CountUpProps) {
     const ref = useRef<HTMLSpanElement>(null);
-    const motionValue = useMotionValue(direction === "down" ? to : from);
+    
+    // Convert string values to numbers safely
+    const toNumber = typeof to === 'string' ? parseFloat(to.replace(/[^\d.-]/g, '')) || 0 : to;
+    const fromNumber = typeof from === 'string' ? parseFloat(from.replace(/[^\d.-]/g, '')) || 0 : from;
+    
+    const motionValue = useMotionValue(Number(direction === "down" ? toNumber : fromNumber));
 
     // Calculate damping and stiffness based on duration
     const damping = 20 + 40 * (1 / duration); // Adjust this formula for finer control
@@ -56,7 +61,7 @@ export default function CountUp({
             }
 
             const timeoutId = setTimeout(() => {
-                motionValue.set(direction === "down" ? from : to);
+                motionValue.set(Number(direction === "down" ? fromNumber : toNumber));
             }, delay * 1000);
 
             const durationTimeoutId = setTimeout(() => {
@@ -70,7 +75,7 @@ export default function CountUp({
                 clearTimeout(durationTimeoutId);
             };
         }
-    }, [isInView, startWhen, motionValue, direction, from, to, delay, onStart, onEnd, duration]);
+    }, [isInView, startWhen, motionValue, direction, fromNumber, toNumber, delay, onStart, onEnd, duration]);
 
     // Update text content with formatted number on spring value change
     useEffect(() => {
@@ -83,17 +88,19 @@ export default function CountUp({
                 };
 
                 const formattedNumber = Intl.NumberFormat("en-US", options).format(
-                    Number(latest.toFixed(0))
+                    Math.abs(latest)
                 );
 
-                ref.current.textContent = separator
-                    ? formattedNumber.replace(/,/g, separator)
-                    : formattedNumber;
+                ref.current.textContent = typeof to === 'string' && latest >= toNumber
+                    ? to 
+                    : separator
+                        ? formattedNumber.replace(/,/g, separator)
+                        : formattedNumber;
             }
         });
 
         return () => unsubscribe();
-    }, [springValue, separator]);
+    }, [springValue, separator, to, toNumber]);
 
     return <span className={`${className}`} ref={ref} />;
 }

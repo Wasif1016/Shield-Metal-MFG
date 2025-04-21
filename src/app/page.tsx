@@ -9,10 +9,12 @@ import Footer from "@/components/sections/footer";
 export default function Home() {
   return (
     <>
-      <Hero />
+     <main className="overflow-x-hidden">
+     <Hero />
       <Products />
       <SuccessStories/>
       <Contact />
+     </main>
     </>
   );
 }

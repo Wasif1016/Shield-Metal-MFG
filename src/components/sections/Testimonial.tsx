@@ -8,7 +8,7 @@ export const testimonials = [
     id: 1,
     name: "John Peterson",
     role: "Aerospace",
-    content: "Shield Metal Industries' stainless steel elbows are exceptional. Their Type 316 elbows offer unmatched corrosion resistance and precision, perfect for our aerospace projects. The team is knowledgeable, responsive, and always delivers on time. A trusted partner for over five years!",
+    content: "Shield Metal Industries' stainless steel elbows are exceptional. Their Type 316 elbows offer unmatched corrosion resistance and precision, perfect for our projects. The team is knowledgeable, responsive, and always delivers on time. A trusted partner for over 25 years",
     rating: 5
   },
   {

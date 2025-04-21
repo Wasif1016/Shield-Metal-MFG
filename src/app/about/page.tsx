@@ -15,7 +15,7 @@ export default function AboutPage() {
   return (
     <main className="bg-black">
       {/* Hero Section */}
-      <section className="relative py-24 md:pt-40 md:pb-32 overflow-hidden">
+      <section className="relative py-24 md:pt-20 md:pb-32 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
         
@@ -154,7 +154,7 @@ export default function AboutPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Our Core Values</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto capitalize">
               The principles that guide everything we do at Shield Metal
             </p>
           </motion.div>

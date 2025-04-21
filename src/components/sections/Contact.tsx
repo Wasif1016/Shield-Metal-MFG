@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { MapPinIcon, PhoneIcon, ClockIcon, CheckIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -65,21 +66,22 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="flex flex-col md:flex-row justify-center items-stretch gap-12">
           {/* Left Column - Contact Details */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-8 bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+            className="w-full space-y-8 bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
           >
             <div className="space-y-6">
+            <Image src="/other-logo.png" alt="Shield Metal Industries" width={500} height={500} className="w-auto h-auto" />
               <h3 className="text-2xl font-semibold text-white">
                 Get in Touch Directly
               </h3>
-              <p className="text-gray-400">
+              {/* <p className="text-gray-400">
                 We're a family-owned business with over 30 years of experience in metal manufacturing. Our team is committed to delivering top-quality solutions.
-              </p>
+              </p> */}
             </div>
 
             <div className="space-y-6">
@@ -114,10 +116,10 @@ export default function Contact() {
                 <div>
                   <h4 className="text-white font-medium">Phone</h4>
                   <a 
-                    href="tel:604-594-7571" 
+                    href="tel:864-457-4121" 
                     className="text-blue-400 hover:text-blue-300 transition-colors"
                   >
-                    604-594-7571
+                    864-457-4121
                   </a>
                 </div>
               </div>
@@ -129,10 +131,11 @@ export default function Contact() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
+            className="w-full h-full"
           >
             <form 
               onSubmit={handleSubmit} 
-              className="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 
+              className=" bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 
               border border-white/10 space-y-6 shadow-2xl"
             >
               <div className="space-y-6">

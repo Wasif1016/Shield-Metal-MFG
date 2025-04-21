@@ -8,8 +8,17 @@ import Footer from "@/components/sections/footer";
 
 
 export const metadata: Metadata = {
-  title: "Next js app",
-  description: "Next js app",
+  title: "Shield Metal Industries",
+  description: "Shield Metal Industries - Metal Roofing, Gutters, and More",
+  openGraph: {
+    title: "Shield Metal Industries",
+    description: "Shield Metal Industries - Metal Roofing, Gutters, and More",
+    url: "https://shieldmetalindustries.com",
+    siteName: "Shield Metal Industries",
+    images: [
+      { url: "/logo.jpg" }
+    ]
+  }
 };
 
 export default function RootLayout({

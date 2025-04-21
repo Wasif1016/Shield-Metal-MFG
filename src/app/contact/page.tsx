@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { PhoneIcon, EnvelopeIcon, ClockIcon, MapPinIcon } from '@heroicons/react/24/outline';
 import Script from 'next/script';
+import Image from 'next/image';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -52,7 +53,7 @@ export default function ContactPage() {
       
       <main className="min-h-screen bg-gradient-to-b from-black to-zinc-900">
         {/* Hero Section */}
-        <section className="relative pt-20 md:pt-32">
+        <section className="relative pt-20 md:pt-20">
           <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
           
           <div className="max-w-7xl mx-auto px-4 relative">
@@ -62,6 +63,7 @@ export default function ContactPage() {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
+               <Image src="/other-logo.png" alt="Shield Metal Industries" width={500} height={500} className="w-auto h-auto mx-auto mb-12" />
               <h1 className="text-5xl font-bold text-white mb-6">
                 Let's Connect
               </h1>
@@ -88,8 +90,8 @@ export default function ContactPage() {
                   <PhoneIcon className="w-6 h-6 text-blue-500" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                <a href="tel:604-594-7571" className="text-gray-400 hover:text-blue-400 transition-colors">
-                  604-594-7571
+                <a href="tel:864-457-4121" className="text-gray-400 hover:text-blue-400 transition-colors">
+                  864-457-4121
                 </a>
                 <p className="text-sm text-gray-500 mt-2">Mon-Fri, 6:30am - 2:45pm PST</p>
               </motion.div>

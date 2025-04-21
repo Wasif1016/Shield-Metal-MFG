@@ -10,10 +10,13 @@ export default function Products() {
       name: 'Stainless Steel Elbows',
       image: '/Stainless+Steel+45+-+Shield+Metal+DS.png',
       features: [
-        'High-quality 0.010 Type 304 & 316 stainless steel',
+        'High-quality 0.010 Type 304L & 316L stainless steel',
         'Available in 90° & 45° long and short radius',
         'Fits 13mm (1/2") IPS to 300mm (12") IPS',
         '25mm (1") to 100mm (4") thickness',
+        'Stainless Steel Elbows',
+        'Smooth & Embossed',
+        '(24 gauge)',
       ],
     },
     {
@@ -24,18 +27,21 @@ export default function Products() {
         'Available in 90° & 45°, long and short radius',
         'Fits 13mm (1/2") IPS to 300mm (12") IPS',
         '25mm (1") to 100mm (4") thickness',
+        'Stainless Steel Elbows',
+        'Smooth & Embossed',
+        '(24 gauge)',
       ],
     },
-    {
-      name: 'Coated Aluminum Elbows',
-      image: '/Stucco+Embossed+90+-+Shield+Metal+DS.png',
-      features: [
-        '1100 Aluminum alloy in 0.024" thickness (24 gauge)',
-        'Smooth and stucco embossed finishes',
-        'Fits 13mm (1/2") IPS to 300mm (12") IPS',
-        '25mm (1") to 100mm (4") thickness',
-      ],
-    },
+    // {
+    //   name: 'Coated Aluminum Elbows',
+    //   image: '/Stucco+Embossed+90+-+Shield+Metal+DS.png',
+    //   features: [
+    //     '1100 Aluminum alloy in 0.024" thickness (24 gauge)',
+    //     'Smooth and stucco embossed finishes',
+    //     'Fits 13mm (1/2") IPS to 300mm (12") IPS',
+    //     '25mm (1") to 100mm (4") thickness',
+    //   ],
+    // },
   ];
 
   return (
@@ -57,7 +63,7 @@ export default function Products() {
         </motion.div>
 
         {/* Products Grid */}
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="flex flex-col md:flex-row justify-center gap-4">
           {products.map((product, index) => (
             <motion.div 
               key={product.name}
