@@ -67,7 +67,7 @@ export default function ContactPage() {
               <h1 className="text-5xl font-bold text-white mb-6">
                 Let's Connect
               </h1>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto capitalize">
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto uppercase">
                 Have questions about our products? We're here to help and answer any questions you might have.
               </p>
             </motion.div>
@@ -90,10 +90,10 @@ export default function ContactPage() {
                   <PhoneIcon className="w-6 h-6 text-blue-500" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                <a href="tel:864-457-4121" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <a href="tel:864-457-4121" className="text-gray-300 hover:text-blue-400 transition-colors">
                   864-457-4121
                 </a>
-                <p className="text-sm text-gray-500 mt-2">Mon-Fri, 6:30am - 2:45pm PST</p>
+                <p className="text-sm text-gray-400 mt-2">Mon-Fri, 6:30am - 2:45pm PST</p>
               </motion.div>
 
               {/* Email */}
@@ -108,10 +108,10 @@ export default function ContactPage() {
                   <EnvelopeIcon className="w-6 h-6 text-green-500" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                <a href="mailto:info@shieldmetal.com" className="text-gray-400 hover:text-green-400 transition-colors">
-                  info@shieldmetal.com
+                <a href="mailto:SHIELD-METAL-MFG@TELUS.NET" className="text-gray-300 hover:text-green-400 transition-colors">
+                  SHIELD-METAL-MFG@TELUS.NET
                 </a>
-                <p className="text-sm text-gray-500 mt-2">We'll respond within 24 hours</p>
+                <p className="text-sm text-gray-400 mt-2">We'll respond within 24 hours</p>
               </motion.div>
 
               {/* Address */}
@@ -126,7 +126,7 @@ export default function ContactPage() {
                   <MapPinIcon className="w-6 h-6 text-purple-500" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-                <p className="text-gray-400">
+                <p className="text-gray-300">
                   12694 82 AVENUE<br />
                   SURREY, BC V3W 3G1
                 </p>
@@ -134,26 +134,55 @@ export default function ContactPage() {
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
-              {/* Map */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="h-[500px] bg-zinc-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10"
-              >
-                <div id="map" className="w-full h-full">
-                  <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2609.0214959882715!2d-122.87472933419049!3d49.15079343598612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d99d7e5bee25%3A0xa4214b16f208c6e0!2s12694%2082%20Ave%2C%20Surrey%2C%20BC%20V3W%203A6!5e0!3m2!1sen!2sca!4v1642883272683!5m2!1sen!2sca"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
+              {/* Left Column - Contact Details */}
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="w-full h-full bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 flex flex-col justify-between"
+          >
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold text-white">
+                Get in Touch Directly
+              </h3>
+              <Image src="/other-logo.png" alt="Shield Metal Industries" width={500} height={400} className="w-auto h-auto" />
+            </div>
+
+            <div className="space-y-6 mt-8">
+              <div className="">
+                <h4 className="text-xl font-semibold text-white mb-4">Eastern & Central USA Customers</h4>
+                <p className="text-gray-300 mb-4">
+                  IF YOU ARE IN THE EASTERN OR CENTRAL USA PLEASE CONTACT CHESNUTT INSULATION DIRECTLY.
+                </p>
+                <div className="space-y-3">
+                  <div>
+                    <span className="text-gray-300">Phone:</span>
+                    <a href="tel:864-457-4121" className="text-blue-400 hover:text-blue-300 ml-2">864-457-4121</a>
+                  </div>
+                  <div>
+                    <span className="text-gray-300">Toll Free:</span>
+                    <a href="tel:1-800-222-5077" className="text-blue-400 hover:text-blue-300 ml-2">1-800-222-5077</a>
+                  </div>
+                  <div>
+                    <span className="text-gray-300">Email Us At:</span>
+                    <a href="mailto:SHIELD-METAL-MFG@TELUS.NET" className="text-blue-400 hover:text-blue-300 ml-2">SHIELD-METAL-MFG@TELUS.NET</a>
+                  </div>
+                  <div>
+                    <span className="text-gray-300">Website:</span>
+                    <a 
+                      href="https://www.chesnuttassociates.com/contact/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-blue-400 hover:text-blue-300 ml-2"
+                    >
+                      www.chesnuttassociates.com/contact/
+                    </a>
+                  </div>
                 </div>
-              </motion.div>
+              </div>
+
+            </div>
+          </motion.div>
 
               {/* Contact Form */}
               <motion.div
@@ -163,10 +192,9 @@ export default function ContactPage() {
                 viewport={{ once: true }}
                 className="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
               >
-                <h2 className="text-2xl font-bold text-white mb-8">Send us a Message</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name
                     </label>
                     <input
@@ -183,7 +211,7 @@ export default function ContactPage() {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                         Email
                       </label>
                       <input
@@ -199,7 +227,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-400 mb-2">
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                         Phone Number
                       </label>
                       <input
@@ -216,7 +244,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                       Message
                     </label>
                     <textarea
@@ -262,6 +290,29 @@ export default function ContactPage() {
                     </div>
                   )}
                 </form>
+              </motion.div>
+            </div>
+
+            <div className="mt-20">
+               {/* Map */}
+               <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="h-[500px] bg-zinc-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10"
+              >
+                <div id="map" className="w-full h-full">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2609.0214959882715!2d-122.87472933419049!3d49.15079343598612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d99d7e5bee25%3A0xa4214b16f208c6e0!2s12694%2082%20Ave%2C%20Surrey%2C%20BC%20V3W%203A6!5e0!3m2!1sen!2sca!4v1642883272683!5m2!1sen!2sca"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
               </motion.div>
             </div>
           </div>

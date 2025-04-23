@@ -26,8 +26,16 @@ export default function Footer() {
               />
               <span className="text-xl font-bold">Shield Metal</span>
             </div>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-100 text-base">
               Precision-engineered metal solutions for the construction and industrial sectors.
+            </p>
+          </div>
+
+          {/* Working Hours */}
+          <div className="md:col-span-1 text-center">
+            <h4 className="text-lg font-semibold mb-4">Working Hours</h4>
+            <p className="text-gray-100 text-base">
+              Monday - Friday: 6:30am to 2:45pm PST
             </p>
           </div>
 
@@ -37,28 +45,28 @@ export default function Footer() {
             <div className="flex space-x-4">
               <a 
                 href="#" 
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-100 hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="w-6 h-6" />
               </a>
               <a 
                 href="#" 
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-100 hover:text-white transition-colors"
                 aria-label="Facebook"
               >
                 <FaFacebook className="w-6 h-6" />
               </a>
               <a 
                 href="#" 
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-100 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <FaInstagram className="w-6 h-6" />
               </a>
               <a 
                 href="#" 
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-100 hover:text-white transition-colors"
                 aria-label="Twitter"
               >
                 <FaTwitter className="w-6 h-6" />
@@ -69,7 +77,7 @@ export default function Footer() {
 
         {/* Copyright and Legal */}
         <div className="mt-8 pt-8 border-t border-white/10 text-center">
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-100 text-base">
             © {currentYear} Shield Metal Manufacturers Ltd. All Rights Reserved.
           </p>
         </div>

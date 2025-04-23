@@ -111,7 +111,7 @@ function TestimonialCard({ testimonial, index }: TestimonialCardProps) {
         {/* <div className="flex items-center gap-4 mt-6 pt-6 border-t border-gray-700">
           <div>
             <h4 className="font-semibold text-white">{testimonial.name}</h4>
-            <p className="text-sm text-gray-400">{testimonial.role}</p>
+            <p className="text-sm text-gray-300">{testimonial.role}</p>
           </div>
         </div> */}
       </div>

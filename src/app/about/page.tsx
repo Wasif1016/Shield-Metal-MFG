@@ -6,7 +6,7 @@ import { ChartBarIcon, ClockIcon, UserGroupIcon, TrophyIcon } from '@heroicons/r
 
 const stats = [
   { id: 1, name: 'Years of Experience', value: '56+', icon: ClockIcon },
-  { id: 2, name: 'Products Manufactured', value: '10,0000+', icon: ChartBarIcon },
+  { id: 2, name: 'Products Manufactured', value: '10000+', icon: ChartBarIcon },
   { id: 3, name: 'Satisfied Customers', value: '150000+', icon: UserGroupIcon },
   { id: 4, name: 'Quality Standards', value: '100%', icon: TrophyIcon },
 ];
@@ -29,7 +29,7 @@ export default function AboutPage() {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight capitalize">
               About US
             </h1>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto capitalize">
+            <p className="text-xl text-gray-200 max-w-2xl mx-auto uppercase">
               Your trusted partner in premium metal manufacturing solutions for over 56+ years.
             </p>
           </motion.div>
@@ -42,7 +42,7 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+                className="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-5 border border-white/10"
               >
                 <div className="flex items-center space-x-4">
                   <div className="p-3 bg-zinc-800 rounded-lg">
@@ -50,7 +50,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <p className="text-2xl font-bold text-white">{stat.value}</p>
-                    <p className="text-gray-400">{stat.name}</p>
+                    <p className="text-gray-300">{stat.name}</p>
                   </div>
                 </div>
               </motion.div>
@@ -74,7 +74,7 @@ export default function AboutPage() {
                 Welcome to Shield Metal Manufacturers LTD.
               </h2>
               
-              <div className="space-y-6 text-gray-400">
+              <div className="space-y-6 text-gray-300">
                 <p className="text-lg leading-relaxed">
                   We offer a complete line of Stainless Steel & Aluminum Fitting Covers.
                 </p>
@@ -154,7 +154,7 @@ export default function AboutPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Our Core Values</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto capitalize">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto capitalize">
               The principles that guide everything we do at Shield Metal
             </p>
           </motion.div>
@@ -189,7 +189,7 @@ export default function AboutPage() {
                   <value.icon className="w-6 h-6 text-blue-500" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{value.title}</h3>
-                <p className="text-gray-400">{value.description}</p>
+                <p className="text-gray-300">{value.description}</p>
               </motion.div>
             ))}
           </div>

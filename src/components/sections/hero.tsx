@@ -65,7 +65,7 @@ export default function Hero() {
           <div className="text-center  md:mr-8 flex items-center flex-col gap-2">
             <CountUp
               from={0}
-              to={"100000+"}
+              to={"10000+"}
               separator=","
               direction="up"
               duration={1}

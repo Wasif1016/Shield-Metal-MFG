@@ -61,12 +61,12 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
             Contact Shield Metal
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Ready to discuss your metal fabrication needs? Our team is standing by to provide expert guidance and support.
           </p>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row justify-center items-stretch gap-12">
+        <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Left Column - Contact Details */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
@@ -75,29 +75,33 @@ export default function Contact() {
             className="w-full h-full bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 flex flex-col justify-between"
           >
             <div className="space-y-6">
-              <Image src="/other-logo.png" alt="Shield Metal Industries" width={500} height={500} className="w-auto h-auto" />
               <h3 className="text-2xl font-semibold text-white">
                 Get in Touch Directly
               </h3>
+              <Image src="/other-logo.png" alt="Shield Metal Industries" width={500} height={400} className="w-auto h-auto" />
             </div>
 
-            <div className="space-y-6">
-              <div className="p-6 bg-zinc-800/50 rounded-xl border border-white/5">
+            <div className="space-y-6 mt-8">
+              <div className="">
                 <h4 className="text-xl font-semibold text-white mb-4">Eastern & Central USA Customers</h4>
-                <p className="text-gray-400 mb-4">
+                <p className="text-gray-300 mb-4">
                   IF YOU ARE IN THE EASTERN OR CENTRAL USA PLEASE CONTACT CHESNUTT INSULATION DIRECTLY.
                 </p>
                 <div className="space-y-3">
                   <div>
-                    <span className="text-gray-400">Phone:</span>
+                    <span className="text-gray-300">Phone:</span>
                     <a href="tel:864-457-4121" className="text-blue-400 hover:text-blue-300 ml-2">864-457-4121</a>
                   </div>
                   <div>
-                    <span className="text-gray-400">Toll Free:</span>
+                    <span className="text-gray-300">Toll Free:</span>
                     <a href="tel:1-800-222-5077" className="text-blue-400 hover:text-blue-300 ml-2">1-800-222-5077</a>
                   </div>
                   <div>
-                    <span className="text-gray-400">Website:</span>
+                    <span className="text-gray-300">Email Us At:</span>
+                    <a href="mailto:SHIELD-METAL-MFG@TELUS.NET" className="text-blue-400 hover:text-blue-300 ml-2">SHIELD-METAL-MFG@TELUS.NET</a>
+                  </div>
+                  <div>
+                    <span className="text-gray-300">Website:</span>
                     <a 
                       href="https://www.chesnuttassociates.com/contact/" 
                       target="_blank" 
@@ -110,15 +114,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="p-3 bg-zinc-800 rounded-lg">
-                  <ClockIcon className="w-6 h-6 text-blue-500" />
-                </div>
-                <div>
-                  <h4 className="text-white font-medium">Working Hours</h4>
-                  <p className="text-gray-400">Monday - Friday: 6:30am to 2:45pm PST</p>
-                </div>
-              </div>
             </div>
           </motion.div>
 

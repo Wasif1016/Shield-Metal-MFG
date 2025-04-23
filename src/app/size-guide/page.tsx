@@ -32,7 +32,7 @@ export default function SizeGuidePage() {
             <h1 className="text-4xl font-bold text-white mb-4 tracking-tight capitalize">
               Product Size Guide
             </h1>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto capitalize">
+            <p className="text-xl text-gray-100 max-w-xl mx-auto uppercase">
               Complete sizing information for our Stainless Steel & Aluminium products
             </p>
           </motion.div>
@@ -57,7 +57,7 @@ export default function SizeGuidePage() {
                   <BeakerIcon className="w-5 h-5 text-blue-500" />
                   <h2 className="text-xl font-semibold text-white">Stainless Steel</h2>
                 </div>
-                <div className="space-y-2 text-sm text-gray-400">
+                <div className="space-y-2 text-base text-gray-200">
                   <p>Available in T-316L & T-304L for:</p>
                   <ul className="space-y-1.5">
                     <li className="flex items-center gap-2">
@@ -88,7 +88,7 @@ export default function SizeGuidePage() {
                   <WrenchIcon className="w-5 h-5 text-green-500" />
                   <h2 className="text-xl font-semibold text-white">Aluminum</h2>
                 </div>
-                <div className="space-y-2 text-sm text-gray-400">
+                <div className="space-y-2 text-base text-gray-200">
                   <p>Available in:</p>
                   <ul className="space-y-1.5">
                     <li className="flex items-center gap-2">
@@ -118,14 +118,14 @@ export default function SizeGuidePage() {
                 className="bg-zinc-900 rounded-xl p-6 border border-white/10"
               >
                 <h2 className="text-xl font-semibold text-white mb-4">How to Choose Your Size</h2>
-                <p className="text-sm text-gray-400 mb-6">
+                <p className="text-base text-gray-200 mb-6">
                   For choosing the right size elbow for your project, reference your Iron pipe size (IPS) 
                   followed by your Insulation size to find your perfect elbow size.
                 </p>
 
                 {/* Formula */}
                 <div className="bg-zinc-800 rounded-lg p-4 text-center mb-6">
-                  <p className="text-sm font-medium text-blue-400">
+                  <p className="text-base font-medium text-blue-400">
                     Iron Pipe Size (IPS) × Insulation Size = Elbow Size
                   </p>
                 </div>
@@ -137,7 +137,7 @@ export default function SizeGuidePage() {
                   <div className="grid md:grid-cols-3 gap-6">
                      {/* Reference Image */}
                   <div className="space-y-3">
-                    <h3 className="text-sm font-medium text-white">90 Degree Ellis</h3>
+                    <h3 className="text-base font-medium text-white">90 Degree Ellis</h3>
                     <div 
                       className="relative h-48 rounded-lg overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]"
                       onClick={() => openFullscreen('/size-guide-1.jpg')}
@@ -152,7 +152,7 @@ export default function SizeGuidePage() {
                   </div>
                     {/* Stainless Steel Specs */}
                     <div className="space-y-3">
-                      <h3 className="text-sm font-medium text-white">
+                      <h3 className="text-base font-medium text-white">
                        90 Short Radius Ellis
                       </h3>
                       <div 
@@ -166,12 +166,12 @@ export default function SizeGuidePage() {
                           className="object-contain bg-zinc-800"
                         />
                       </div>
-                      {/* <p className="text-xs text-gray-400">90° - 90°SR - 45° - 0.0100"</p> */}
+                      {/* <p className="text-xs text-gray-200">90° - 90°SR - 45° - 0.0100"</p> */}
                     </div>
 
                     {/* Aluminum Specs */}
                     <div className="space-y-3">
-                      <h3 className="text-sm font-medium text-white">
+                      <h3 className="text-base font-medium text-white">
                         45 Degree Ellis
                       </h3>
                       <div 
@@ -185,7 +185,7 @@ export default function SizeGuidePage() {
                           className="object-contain bg-zinc-800"
                         />
                       </div>
-                      {/* <p className="text-xs text-gray-400">
+                      {/* <p className="text-xs text-gray-200">
                         90° - 90° BR - 45° smooth-Stucco 0.024"
                         <br />
                         with factory applied acrylic exterior coating
