@@ -15,19 +15,17 @@ export default function ProductsPage() {
             {
               name: "45° Elbow",
               image: "/products/Stainless-Steel-45.png", 
-              description: "Precision-formed 45° angle for directional changes"
+              description: "Precision-formed 45°"
             },
             {
               name: "90° Elbow",
               image: "/products/Stainless-Steel-90.png",
-              description: "Standard 90° angle for right-angle turns"
+              description: "Standard 90°"
             }
           ],
           thickness: "0.010\"",
           features: [
             "Excellent corrosion resistance",
-            "High strength-to-weight ratio", 
-            "Smooth interior for optimal airflow",
             "Weather-tight seal"
           ],
           sizes: "1/2\" to 12\" IPS | 1\" to 4\" insulation"
@@ -43,15 +41,12 @@ export default function ProductsPage() {
             {
               name: "90° Elbow", 
               image: "/products/Stainless-Steel-90.png",
-              description: "Heavy-duty 90° angle for demanding applications"
+              // description: "Heavy-duty 90° angle for demanding applications"
             }
           ],
           thickness: "0.010\"",
           features: [
-            "Superior chloride resistance",
             "Ideal for coastal/marine environments",
-            "High temperature tolerance",
-            "Low maintenance"
           ],
           sizes: "1/2\" to 12\" IPS | 1\" to 4\" insulation"
         }
@@ -66,7 +61,7 @@ export default function ProductsPage() {
             {
               name: "45° Elbow",
               image: "/products/Aluminum-45.png",
-              description: "Clean 45° angle with uniform surface"
+              description: "Clean 45° angle"
             },
             {
               name: "90° Elbow",
@@ -74,7 +69,7 @@ export default function ProductsPage() {
               description: "Streamlined 90° angle transition"
             }
           ],
-          thickness: "0.024\" (24 gauge)",
+          thickness: "0.024\"",
           features: [
             "Factory-applied acrylic exterior coating",
             "Blue epoxy interior moisture barrier",
@@ -183,7 +178,7 @@ export default function ProductsPage() {
                             />
                           </div>
                           <h4 className="font-medium text-foreground">{angle.name}</h4>
-                          <p className="text-sm text-foreground">{angle.description}</p>
+                          {angle.description && <p className="text-sm text-foreground">{angle.description}</p>}
                         </div>
                       ))}
                     </div>
