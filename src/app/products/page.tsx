@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { CheckBadgeIcon, ShieldCheckIcon, MapPinIcon, StarIcon, BeakerIcon, ArrowsPointingOutIcon } from '@heroicons/react/24/solid';
+import MetallicText from '@/components/metalic-text';
 
 export default function ProductsPage() {
   const products = [
@@ -110,7 +111,7 @@ export default function ProductsPage() {
       {/* Hero Section */}
       <section className="relative py-20 md:pt-20 bg-muted">
         <div className="absolute inset-0 bg-[url('/texture-dark.png')] opacity-20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -121,10 +122,8 @@ export default function ProductsPage() {
               <ShieldCheckIcon className="w-5 h-5 mr-2 capitalize" />
               North American Made Quality
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4 capitalize">HVAC Elbow Solutions</h1>
-            <p className="text-xl text-foreground max-w-3xl mx-auto uppercase">
-              Premium stainless steel and aluminum elbows engineered for durability and performance
-            </p>
+            <MetallicText text="HVAC Elbow Solutions" className="p-[6px] text-4xl md:text-6xl lg:text-7xl font-[900] mb-4" />
+            <MetallicText text="Premium stainless steel and aluminum elbows engineered for durability and performance" className="p-[3px] text-2xl md:text-3xl lg:text-4xl font-[900]" />
           </motion.div>
         </div>
       </section>

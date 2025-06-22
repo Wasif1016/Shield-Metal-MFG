@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ChartBarIcon, ClockIcon, UserGroupIcon, TrophyIcon } from '@heroicons/react/24/outline';
+import MetallicText from '@/components/metalic-text';
 
 const stats = [
   { id: 1, name: 'Years of Experience', value: '56+', icon: ClockIcon },
@@ -26,9 +27,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight capitalize">
-              About US
-            </h1>
+            <MetallicText text="About US" className="p-[6px] text-4xl md:text-6xl lg:text-7xl font-[900] mb-6" />
             <p className="text-xl text-gray-200 max-w-2xl mx-auto uppercase">
               Your trusted partner in premium metal manufacturing solutions for over 56+ years.
             </p>
@@ -153,10 +152,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Our Core Values</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto capitalize">
-              The principles that guide everything we do at Shield Metal
-            </p>
+            <MetallicText text="Our Core Values" className="p-[6px] text-4xl md:text-6xl lg:text-7xl font-[900] mb-6" />
+            <MetallicText text="The principles that guide everything we do at Shield Metal" className="p-[3px] text-2xl md:text-3xl lg:text-4xl font-[900]" />
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">

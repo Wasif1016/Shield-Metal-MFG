@@ -1,9 +1,14 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { ArrowRightIcon, BeakerIcon, WrenchIcon } from '@heroicons/react/24/outline';
-import { useState } from 'react';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import {
+  ArrowRightIcon,
+  BeakerIcon,
+  WrenchIcon,
+} from "@heroicons/react/24/outline";
+import { useState } from "react";
+import MetallicText from "@/components/metalic-text";
 
 export default function SizeGuidePage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -19,22 +24,18 @@ export default function SizeGuidePage() {
   return (
     <main className="bg-black min-h-screen">
       {/* Hero Section - More Compact */}
-      <section className="relative py-16 md:pt-20 overflow-hidden">
+      <section className="relative py-16 md:pt-24 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        
-        <div className="max-w-6xl mx-auto px-4 relative">
+
+        <div className="max-w-4xl mx-auto px-4 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl font-bold text-white mb-4 tracking-tight capitalize">
-              Product Size Guide
-            </h1>
-            <p className="text-xl text-gray-100 max-w-xl mx-auto uppercase">
-              Complete sizing information for our Stainless Steel & Aluminium products
-            </p>
+            <MetallicText text="Product Size Guide" className="p-[6px] text-4xl md:text-6xl lg:text-7xl font-[900] mb-6" />
+            <MetallicText text="Complete sizing information for all our stainless steel & aluminum products" className="p-[3px] text-2xl md:text-3xl lg:text-4xl font-[900]" />
           </motion.div>
         </div>
       </section>
@@ -55,7 +56,9 @@ export default function SizeGuidePage() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <BeakerIcon className="w-5 h-5 text-blue-500" />
-                  <h2 className="text-xl font-semibold text-white">Stainless Steel</h2>
+                  <h2 className="text-xl font-semibold text-white">
+                    Stainless Steel
+                  </h2>
                 </div>
                 <div className="space-y-2 text-base text-gray-200">
                   <p>Available in T-316L & T-304L for:</p>
@@ -117,10 +120,13 @@ export default function SizeGuidePage() {
                 viewport={{ once: true }}
                 className="bg-zinc-900 rounded-xl p-6 border border-white/10"
               >
-                <h2 className="text-xl font-semibold text-white mb-4">How to Choose Your Size</h2>
+                <h2 className="text-xl font-semibold text-white mb-4">
+                  How to Choose Your Size
+                </h2>
                 <p className="text-base text-gray-200 mb-6">
-                  For choosing the right size elbow for your project, reference your Iron pipe size (IPS) 
-                  followed by your Insulation size to find your perfect elbow size.
+                  For choosing the right size elbow for your project, reference
+                  your Iron pipe size (IPS) followed by your Insulation size to
+                  find your perfect elbow size.
                 </p>
 
                 {/* Formula */}
@@ -132,32 +138,33 @@ export default function SizeGuidePage() {
 
                 {/* Size Guide Images in Grid */}
                 <div className="grid gap-6">
-                 
                   {/* Specifications Grid */}
                   <div className="grid md:grid-cols-3 gap-6">
-                     {/* Reference Image */}
-                  <div className="space-y-3">
-                    <h3 className="text-base font-medium text-white">90 Degree Ellis</h3>
-                    <div 
-                      className="relative h-48 rounded-lg overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]"
-                      onClick={() => openFullscreen('/size-guide-1.jpg')}
-                    >
-                      <Image
-                        src="/size-guide-1.jpg"
-                        alt="Size Guide Reference"
-                        fill
-                        className="object-contain bg-zinc-800"
-                      />
+                    {/* Reference Image */}
+                    <div className="space-y-3">
+                      <h3 className="text-base font-medium text-white">
+                        90 Degree Ellis
+                      </h3>
+                      <div
+                        className="relative h-48 rounded-lg overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]"
+                        onClick={() => openFullscreen("/size-guide-1.jpg")}
+                      >
+                        <Image
+                          src="/size-guide-1.jpg"
+                          alt="Size Guide Reference"
+                          fill
+                          className="object-contain bg-zinc-800"
+                        />
+                      </div>
                     </div>
-                  </div>
                     {/* Stainless Steel Specs */}
                     <div className="space-y-3">
                       <h3 className="text-base font-medium text-white">
-                       90 Short Radius Ellis
+                        90 Short Radius Ellis
                       </h3>
-                      <div 
+                      <div
                         className="relative h-40 rounded-lg overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]"
-                        onClick={() => openFullscreen('/size-guide-2.jpg')}
+                        onClick={() => openFullscreen("/size-guide-2.jpg")}
                       >
                         <Image
                           src="/size-guide-2.jpg"
@@ -174,9 +181,9 @@ export default function SizeGuidePage() {
                       <h3 className="text-base font-medium text-white">
                         45 Degree Ellis
                       </h3>
-                      <div 
+                      <div
                         className="relative h-40 rounded-lg overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]"
-                        onClick={() => openFullscreen('/size-guide-3.jpg')}
+                        onClick={() => openFullscreen("/size-guide-3.jpg")}
                       >
                         <Image
                           src="/size-guide-3.jpg"
@@ -201,7 +208,7 @@ export default function SizeGuidePage() {
 
       {/* Fullscreen Image Modal */}
       {selectedImage && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
           onClick={closeFullscreen}
         >
@@ -212,12 +219,23 @@ export default function SizeGuidePage() {
               fill
               className="object-contain"
             />
-            <button 
+            <button
               className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 rounded-full p-2 text-white"
               onClick={closeFullscreen}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>
@@ -225,4 +243,4 @@ export default function SizeGuidePage() {
       )}
     </main>
   );
-} 
+}

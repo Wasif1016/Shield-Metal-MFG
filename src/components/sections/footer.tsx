@@ -1,11 +1,6 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { 
-  FaLinkedin, 
-  FaFacebook, 
-  FaInstagram, 
-  FaTwitter 
-} from 'react-icons/fa';
+import Link from "next/link";
+import Image from "next/image";
+import { FaLinkedin, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,17 +12,18 @@ export default function Footer() {
           {/* Logo and Description */}
           <div className="md:col-span-1 max-w-xs">
             <div className="flex items-center space-x-3 mb-4">
-              <Image 
-                src="/logo.jpg" 
-                alt="Shield Metal Logo" 
-                width={50} 
-                height={50} 
+              <Image
+                src="/logo.jpg"
+                alt="Shield Metal Logo"
+                width={50}
+                height={50}
                 className="rounded-full"
               />
               <span className="text-xl font-bold">Shield Metal</span>
             </div>
             <p className="text-gray-100 text-base">
-              Precision-engineered metal solutions for the construction and industrial sectors.
+              Precision-engineered metal solutions for the construction and
+              industrial sectors.
             </p>
           </div>
 
@@ -77,8 +73,26 @@ export default function Footer() {
 
         {/* Copyright and Legal */}
         <div className="mt-8 pt-8 border-t border-white/10 text-center">
-          <p className="text-gray-100 text-base">
+          <p className="text-xl mb-2">
             © {currentYear} Shield Metal Manufacturers Ltd. All Rights Reserved.
+          </p>
+          <p className="text-xl mb-4">
+            Developed by{" "}
+            <Link
+              href="https://haseebkhan.online/"
+              className="text-xl hover:underline"
+              target="_blank"
+            >
+              Haseeb Khan
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="https://wasif-khan.netlify.app/"
+              className="text-xl hover:underline"
+              target="_blank"
+            >
+              Wasif Ali Khan
+            </Link>
           </p>
         </div>
       </div>

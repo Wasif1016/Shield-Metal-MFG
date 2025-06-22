@@ -2,6 +2,7 @@ import Image from "next/image";
 import CountUp from "../ui/count-up";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import MetallicText from "../metalic-text";
 
 export default function Hero() {
   return (
@@ -38,14 +39,10 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mb-16 max-w-2xl mx-auto text-center space-y-4">
-          <p className="text-white text-2xl text-center">
-          DOING BUSINESS ACROSS <br />
-          NORTH AMERICA, SINCE 1969
-          </p>
-          <p className="text-white text-2xl text-center">
-          WE OFFER A COMPLETE LINE OF STAINLESS STEEL & ALUMINUM FITTING COVER BANDING, WING CLIPS, CUSTOM FLAT SHEETS
-          </p>
+        <div className="mb-16 max-w-2xl mx-auto text-center">
+          <MetallicText text="DOING BUSINESS ACROSS" className="p-[3px] text-3xl md:text-4xl lg:text-5xl font-[900]" />
+          <MetallicText text="NORTH AMERICA, SINCE 1969" className="p-[3px] text-3xl md:text-4xl lg:text-5xl font-[900] mb-6" />
+          <MetallicText text="WE OFFER A COMPLETE LINE OF STAINLESS STEEL & ALUMINUM FITTING COVER BANDING, WING CLIPS, CUSTOM FLAT SHEETS" className="p-[3px] text-xl md:text-2xl lg:text-3xl font-[900]" />
         </div>
 
 

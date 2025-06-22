@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { GeistSans } from 'geist/font/sans';
+import { Roboto } from 'next/font/google';
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from '@/components/sections/Navbar';
 import SmoothScrolling from "@/components/Smooth-scrolling";
 import Footer from "@/components/sections/footer";
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-roboto'
+});
 
 
 export const metadata: Metadata = {
@@ -28,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className={`${roboto.variable} font-roboto antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

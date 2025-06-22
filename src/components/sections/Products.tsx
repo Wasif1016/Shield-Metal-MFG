@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import MetallicText from '../metalic-text';
 
 export default function Products() {
   const products = [
@@ -51,10 +52,8 @@ export default function Products() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-            Our Premium Products
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <MetallicText text="Our Premium Products" className="p-[6px] text-4xl md:text-6xl lg:text-7xl font-[900] mb-6" />
+          <p className="text-xl text-foreground max-w-2xl mx-auto">
             Precision-engineered solutions crafted with exceptional materials and meticulous attention to detail.
           </p>
         </motion.div>

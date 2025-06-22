@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { MapPinIcon, PhoneIcon, ClockIcon, CheckIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import MetallicText from '../metalic-text';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -58,10 +59,8 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-            Contact Shield Metal
-          </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <MetallicText text="Contact Shield Metal" className="p-[8px] text-4xl md:text-6xl lg:text-7xl font-[900] mb-4" />
+          <p className="text-xl max-w-2xl mx-auto">
             Ready to discuss your metal fabrication needs? Our team is standing by to provide expert guidance and support.
           </p>
         </motion.div>

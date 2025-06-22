@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Quote, Star } from "lucide-react"
+import MetallicText from "../metalic-text";
 
 export const testimonials = [
   {
@@ -38,17 +39,10 @@ export function SuccessStories() {
       <div className="max-w-[2350px] mx-auto px-6 lg:px-12">
         <div className="space-y-12">
           {/* Section Header */}
-          <div className="text-center space-y-4 relative z-10">
-            <motion.h2 
-              className="text-4xl md:text-6xl font-custom text-white"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              Client Testimonials
-            </motion.h2>
+          <div className="text-center relative z-10">
+            <MetallicText text="Client Testimonials" className="p-[6px] text-4xl md:text-6xl lg:text-7xl font-[900] mb-4" />
             <motion.p 
-              className="text-lg text-gray-300 max-w-2xl mx-auto"
+              className="text-xl max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
