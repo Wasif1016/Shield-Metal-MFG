@@ -1,36 +1,43 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Quote, Star } from "lucide-react"
+import { motion } from "framer-motion";
+import { Quote, Star } from "lucide-react";
 import MetallicText from "../metalic-text";
+import Image from "next/image";
 
 export const testimonials = [
   {
     id: 1,
     name: "John Peterson",
     role: "Aerospace",
-    content: "Shield Metal Industries' stainless steel elbows are exceptional. Their Type 316 elbows offer unmatched corrosion resistance and precision, perfect for our projects. The team is knowledgeable, responsive, and always delivers on time. A trusted partner for over 25 years",
-    rating: 5
+    content:
+      "Shield Metal Industries' stainless steel elbows are exceptional. Their Type 316 elbows offer unmatched corrosion resistance and precision, perfect for our projects. The team is knowledgeable, responsive, and always delivers on time. A trusted partner for over 25 years",
+    rating: 5,
   },
   {
     id: 2,
     name: "Sarah Mitchell",
     role: "Construction",
-    content: "We rely on Shield's aluminum elbows for our construction projects. The smooth and stucco finishes are durable and weather-resistant, with excellent coatings for long-term protection. Their attention to detail and professionalism make them a top choice for us.",
-    rating: 5
+    content:
+      "We rely on Shield's aluminum elbows for our construction projects. The smooth and stucco finishes are durable and weather-resistant, with excellent coatings for long-term protection. Their attention to detail and professionalism make them a top choice for us.",
+    rating: 5,
   },
   {
     id: 3,
     name: "Michael Reynolds",
     role: "Energy",
-    content: "Shield's coated aluminum elbows are a perfect fit for our energy projects. The corrosion-resistant coatings and lightweight 1100 alloy ensure reliability in harsh conditions. Their custom solutions and expertise have made them a trusted partner for our team.",
-    rating: 5
-  }
+    content:
+      "Shield's coated aluminum elbows are a perfect fit for our energy projects. The corrosion-resistant coatings and lightweight 1100 alloy ensure reliability in harsh conditions. Their custom solutions and expertise have made them a trusted partner for our team.",
+    rating: 5,
+  },
 ];
 
 export function SuccessStories() {
   return (
-    <section id="stories" className="relative py-16 md:py-20 overflow-hidden bg-black">
+    <section
+      id="stories"
+      className="relative py-16 md:py-20 overflow-hidden bg-black"
+    >
       {/* Background gradient */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-3xl opacity-100" />
@@ -39,9 +46,15 @@ export function SuccessStories() {
       <div className="max-w-[2350px] mx-auto px-6 lg:px-12">
         <div className="space-y-12">
           {/* Section Header */}
-          <div className="text-center relative z-10">
-            <MetallicText text="Client Testimonials" className="p-[6px] text-4xl md:text-6xl lg:text-7xl font-[900] mb-4" />
-            <motion.p 
+          <div className="text-center relative z-10 max-w-3xl mx-auto">
+            <Image
+              src="/Client-Testimonials.png"
+              alt="Client Testimonials"
+              width={1000}
+              height={1000}
+              className="w-auto h-auto"
+            />
+            <motion.p
               className="text-xl max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +67,7 @@ export function SuccessStories() {
           {/* Testimonials Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
-              <TestimonialCard 
+              <TestimonialCard
                 key={testimonial.id}
                 testimonial={testimonial}
                 index={index}
@@ -64,17 +77,17 @@ export function SuccessStories() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 interface TestimonialCardProps {
-  testimonial: typeof testimonials[0]
-  index: number
+  testimonial: (typeof testimonials)[0];
+  index: number;
 }
 
 function TestimonialCard({ testimonial, index }: TestimonialCardProps) {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -110,5 +123,5 @@ function TestimonialCard({ testimonial, index }: TestimonialCardProps) {
         </div> */}
       </div>
     </motion.div>
-  )
+  );
 }

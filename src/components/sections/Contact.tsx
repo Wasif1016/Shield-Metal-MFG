@@ -1,29 +1,35 @@
-"use client"
+"use client";
 
-import { useState } from 'react';
-import { MapPinIcon, PhoneIcon, ClockIcon, CheckIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
-import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
-import MetallicText from '../metalic-text';
+import { useState } from "react";
+import {
+  MapPinIcon,
+  PhoneIcon,
+  ClockIcon,
+  CheckIcon,
+  ExclamationTriangleIcon,
+} from "@heroicons/react/24/outline";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import MetallicText from "../metalic-text";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('sending');
+    setStatus("sending");
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -31,18 +37,18 @@ export default function Contact() {
       const data = await response.json();
 
       if (response.ok) {
-        setStatus('success');
-        setFormData({ name: '', email: '', phone: '', message: '' });
-        setTimeout(() => setStatus(''), 5000);
+        setStatus("success");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+        setTimeout(() => setStatus(""), 5000);
       } else {
-        console.error('Form submission error:', data.error);
-        setStatus('error');
-        setTimeout(() => setStatus(''), 5000);
+        console.error("Form submission error:", data.error);
+        setStatus("error");
+        setTimeout(() => setStatus(""), 5000);
       }
     } catch (error) {
-      console.error('Form submission error:', error);
-      setStatus('error');
-      setTimeout(() => setStatus(''), 5000);
+      console.error("Form submission error:", error);
+      setStatus("error");
+      setTimeout(() => setStatus(""), 5000);
     }
   };
 
@@ -50,24 +56,31 @@ export default function Contact() {
     <section className="relative py-16 md:py-24 bg-black">
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] z-0"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 max-w-3xl mx-auto"
         >
-          <MetallicText text="Contact Shield Metal" className="p-[8px] text-4xl md:text-6xl lg:text-7xl font-[900] mb-4" />
+          <Image
+            src="/Contact-Shield-Metal.png"
+            alt="Contact Shield Metal"
+            width={1000}
+            height={1000}
+            className="w-auto h-auto"
+          />
           <p className="text-xl max-w-2xl mx-auto">
-            Ready to discuss your metal fabrication needs? Our team is standing by to provide expert guidance and support.
+            Ready to discuss your metal fabrication needs? Our team is standing
+            by to provide expert guidance and support.
           </p>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row items-center gap-12">
+        <div className="flex flex-col md:flex-row items-center gap-12"> 
           {/* Left Column - Contact Details */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -77,34 +90,58 @@ export default function Contact() {
               <h3 className="text-2xl font-semibold text-white">
                 Get in Touch Directly
               </h3>
-              <Image src="/other-logo.png" alt="Shield Metal Industries" width={500} height={400} className="w-auto h-auto" />
+              <Image
+                src="/other-logo.png"
+                alt="Shield Metal Industries"
+                width={500}
+                height={400}
+                className="w-auto h-auto"
+              />
             </div>
 
             <div className="space-y-6 mt-8">
               <div className="">
-                <h4 className="text-xl font-semibold text-white mb-4">Eastern & Central USA Customers</h4>
+                <h4 className="text-xl font-semibold text-white mb-4">
+                  Eastern & Central USA Customers
+                </h4>
                 <p className="text-gray-300 mb-4">
-                  IF YOU ARE IN THE EASTERN OR CENTRAL USA PLEASE CONTACT CHESNUTT INSULATION DIRECTLY.
+                  IF YOU ARE IN THE EASTERN OR CENTRAL USA PLEASE CONTACT
+                  CHESNUTT INSULATION DIRECTLY.
                 </p>
                 <div className="space-y-3">
                   <div>
                     <span className="text-gray-300">Phone:</span>
-                    <a href="tel:864-457-4121" className="text-blue-400 hover:text-blue-300 ml-2">864-457-4121</a>
+                    <a
+                      href="tel:864-457-4121"
+                      className="text-blue-400 hover:text-blue-300 ml-2"
+                    >
+                      864-457-4121
+                    </a>
                   </div>
                   <div>
                     <span className="text-gray-300">Toll Free:</span>
-                    <a href="tel:1-800-222-5077" className="text-blue-400 hover:text-blue-300 ml-2">1-800-222-5077</a>
+                    <a
+                      href="tel:1-800-222-5077"
+                      className="text-blue-400 hover:text-blue-300 ml-2"
+                    >
+                      1-800-222-5077
+                    </a>
                   </div>
                   <div>
                     <span className="text-gray-300">Email Us At:</span>
-                    <a href="mailto:SHIELD-METAL-MFG@TELUS.NET" className="text-blue-400 hover:text-blue-300 ml-2">SHIELD-METAL-MFG@TELUS.NET</a>
+                    <a
+                      href="mailto:SHIELD-METAL-MFG@TELUS.NET"
+                      className="text-blue-400 hover:text-blue-300 ml-2"
+                    >
+                      SHIELD-METAL-MFG@TELUS.NET
+                    </a>
                   </div>
                   <div>
                     <span className="text-gray-300">Website:</span>
-                    <a 
-                      href="https://www.chesnuttassociates.com/contact/" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <a
+                      href="https://www.chesnuttassociates.com/contact/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-blue-400 hover:text-blue-300 ml-2"
                     >
                       www.chesnuttassociates.com/contact/
@@ -112,19 +149,18 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-
             </div>
           </motion.div>
 
           {/* Right Column - Contact Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             className="w-full h-full"
           >
-            <form 
-              onSubmit={handleSubmit} 
+            <form
+              onSubmit={handleSubmit}
               className="h-full bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 
               border border-white/10 space-y-6 shadow-2xl"
             >
@@ -138,7 +174,9 @@ export default function Contact() {
                   focus:outline-none focus:ring-2 focus:ring-primary
                   transition-all duration-300"
                   value={formData.name}
-                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
                 />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -151,7 +189,9 @@ export default function Contact() {
                     focus:outline-none focus:ring-2 focus:ring-primary
                     transition-all duration-300"
                     value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                   />
 
                   <input
@@ -163,7 +203,9 @@ export default function Contact() {
                     focus:outline-none focus:ring-2 focus:ring-primary
                     transition-all duration-300"
                     value={formData.phone}
-                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    onChange={(e) =>
+                      setFormData({ ...formData, phone: e.target.value })
+                    }
                   />
                 </div>
 
@@ -176,13 +218,15 @@ export default function Contact() {
                   focus:outline-none focus:ring-2 focus:ring-primary
                   transition-all duration-300"
                   value={formData.message}
-                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                disabled={status === 'sending'}
+                disabled={status === "sending"}
                 className="w-full py-4 px-6 bg-foreground text-background font-semibold 
                 rounded-xl hover:bg-foreground/80 
                 transition-all duration-300 
@@ -190,38 +234,38 @@ export default function Contact() {
                 disabled:opacity-50 disabled:hover:scale-100 
                 flex items-center justify-center space-x-2"
               >
-                {status === 'sending' ? (
+                {status === "sending" ? (
                   <>
-                    <svg 
-                      className="animate-spin h-5 w-5 mr-3" 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      fill="none" 
+                    <svg
+                      className="animate-spin h-5 w-5 mr-3"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
                       viewBox="0 0 24 24"
                     >
-                      <circle 
-                        className="opacity-25" 
-                        cx="12" 
-                        cy="12" 
-                        r="10" 
-                        stroke="currentColor" 
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
                         strokeWidth="4"
                       ></circle>
-                      <path 
-                        className="opacity-75" 
-                        fill="currentColor" 
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
                         d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                       ></path>
                     </svg>
                     Sending...
                   </>
                 ) : (
-                  'Send Message'
+                  "Send Message"
                 )}
               </button>
 
               <AnimatePresence>
-                {status === 'success' && (
-                  <motion.div 
+                {status === "success" && (
+                  <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
@@ -232,8 +276,8 @@ export default function Contact() {
                     <span>Message sent successfully!</span>
                   </motion.div>
                 )}
-                {status === 'error' && (
-                  <motion.div 
+                {status === "error" && (
+                  <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}

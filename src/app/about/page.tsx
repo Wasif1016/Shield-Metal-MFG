@@ -1,15 +1,20 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { ChartBarIcon, ClockIcon, UserGroupIcon, TrophyIcon } from '@heroicons/react/24/outline';
-import MetallicText from '@/components/metalic-text';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import {
+  ChartBarIcon,
+  ClockIcon,
+  UserGroupIcon,
+  TrophyIcon,
+} from "@heroicons/react/24/outline";
+import MetallicText from "@/components/metalic-text";
 
 const stats = [
-  { id: 1, name: 'Years of Experience', value: '56+', icon: ClockIcon },
-  { id: 2, name: 'Products Manufactured', value: '10000+', icon: ChartBarIcon },
-  { id: 3, name: 'Satisfied Customers', value: '150000+', icon: UserGroupIcon },
-  { id: 4, name: 'Quality Standards', value: '100%', icon: TrophyIcon },
+  { id: 1, name: "Years of Experience", value: "56+", icon: ClockIcon },
+  { id: 2, name: "Products Manufactured", value: "10000+", icon: ChartBarIcon },
+  { id: 3, name: "Satisfied Customers", value: "150000+", icon: UserGroupIcon },
+  { id: 4, name: "Quality Standards", value: "100%", icon: TrophyIcon },
 ];
 
 export default function AboutPage() {
@@ -19,17 +24,25 @@ export default function AboutPage() {
       <section className="relative py-24 md:pt-20 md:pb-32 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        
+
         <div className="max-w-7xl mx-auto px-4 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-16 max-w-3xl mx-auto"
           >
-            <MetallicText text="About US" className="p-[6px] text-4xl md:text-6xl lg:text-7xl font-[900] mb-6" />
+            <Image
+              src="/About-Us.png"
+              alt="Size Guide"
+              width={1000}
+              height={1000}
+              quality={100}
+              className="mx-auto w-full h-fit object-contain max-w-md px-4"
+            />
             <p className="text-xl text-gray-200 max-w-2xl mx-auto uppercase">
-              Your trusted partner in premium metal manufacturing solutions for over 56+ years.
+              Your trusted partner in premium metal manufacturing solutions for
+              over 56+ years.
             </p>
           </motion.div>
 
@@ -48,7 +61,9 @@ export default function AboutPage() {
                     <stat.icon className="w-6 h-6 text-blue-500" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-white">{stat.value}</p>
+                    <p className="text-2xl font-bold text-white">
+                      {stat.value}
+                    </p>
                     <p className="text-gray-300">{stat.name}</p>
                   </div>
                 </div>
@@ -72,21 +87,25 @@ export default function AboutPage() {
               <h2 className="text-4xl font-bold text-white mb-6">
                 Welcome to Shield Metal Manufacturers LTD.
               </h2>
-              
+
               <div className="space-y-6 text-gray-300">
                 <p className="text-lg leading-relaxed">
-                  We offer a complete line of Stainless Steel & Aluminum Fitting Covers.
-                </p>
-                
-                <p className="text-lg leading-relaxed">
-                  With over 56+ years of doing business, our years of experience and commitment to you, 
-                  our customers, ensures you will receive fast, friendly and efficient service - all the time, 
-                  every time.
+                  We offer a complete line of Stainless Steel & Aluminum Fitting
+                  Covers.
                 </p>
 
                 <p className="text-lg leading-relaxed">
-                  Thinking as contractors, Shield's goal is to produce a stainless steel elbow that matches 
-                  the jacketing application…that's what you get with Shield…why do it any other way.
+                  With over 56+ years of doing business, our years of experience
+                  and commitment to you, our customers, ensures you will receive
+                  fast, friendly and efficient service - all the time, every
+                  time.
+                </p>
+
+                <p className="text-lg leading-relaxed">
+                  Thinking as contractors, Shield's goal is to produce a
+                  stainless steel elbow that matches the jacketing
+                  application…that's what you get with Shield…why do it any
+                  other way.
                 </p>
               </div>
 
@@ -150,27 +169,52 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-16 max-w-xl mx-auto"
           >
-            <MetallicText text="Our Core Values" className="p-[6px] text-4xl md:text-6xl lg:text-7xl font-[900] mb-6" />
-            <MetallicText text="The principles that guide everything we do at Shield Metal" className="p-[3px] text-2xl md:text-3xl lg:text-4xl font-[900]" />
+            <Image
+              src="/Our-Core-Values.png"
+              alt="Size Guide"
+              width={1000}
+              height={1000}
+              quality={100}
+              className="mx-auto w-full h-fit object-contain"
+            />
+            <Image
+              src="/The-principles-that-guide.png"
+              alt="Size Guide"
+              width={1000}
+              height={1000}
+              quality={100}
+              className="mx-auto w-full h-fit object-contain hidden md:block -mt-4"
+            />
+            <Image
+              src="/The-principles-that-guide-mobile.png"
+              alt="Size Guide"
+              width={1000}
+              height={1000}
+              quality={100}
+              className="mx-auto w-full h-fit object-contain md:hidden px-4"
+            />
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Quality First',
-                description: 'We maintain the highest standards in every product we manufacture.',
+                title: "Quality First",
+                description:
+                  "We maintain the highest standards in every product we manufacture.",
                 icon: TrophyIcon,
               },
               {
-                title: 'Customer Focus',
-                description: 'Your satisfaction is our top priority, with fast and friendly service.',
+                title: "Customer Focus",
+                description:
+                  "Your satisfaction is our top priority, with fast and friendly service.",
                 icon: UserGroupIcon,
               },
               {
-                title: 'Experience',
-                description: '56+ years of expertise in metal manufacturing solutions.',
+                title: "Experience",
+                description:
+                  "56+ years of expertise in metal manufacturing solutions.",
                 icon: ClockIcon,
               },
             ].map((value, index) => (
@@ -185,7 +229,9 @@ export default function AboutPage() {
                 <div className="p-3 bg-zinc-800 rounded-lg w-fit mb-6">
                   <value.icon className="w-6 h-6 text-blue-500" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{value.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  {value.title}
+                </h3>
                 <p className="text-gray-300">{value.description}</p>
               </motion.div>
             ))}
@@ -194,4 +240,4 @@ export default function AboutPage() {
       </section>
     </main>
   );
-} 
+}

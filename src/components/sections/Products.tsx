@@ -50,9 +50,9 @@ export default function Products() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 max-w-3xl mx-auto"
         >
-          <MetallicText text="Our Premium Products" className="p-[6px] text-4xl md:text-6xl lg:text-7xl font-[900] mb-6" />
+          <Image src="/Our-Premium-Products.png" alt="Our-Premium-Products" width={1000} height={1000} className="w-auto h-auto" />
           <p className="text-xl text-foreground max-w-2xl mx-auto">
             Precision-engineered solutions crafted with exceptional materials and meticulous attention to detail.
           </p>

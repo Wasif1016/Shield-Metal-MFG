@@ -1,9 +1,16 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { CheckBadgeIcon, ShieldCheckIcon, MapPinIcon, StarIcon, BeakerIcon, ArrowsPointingOutIcon } from '@heroicons/react/24/solid';
-import MetallicText from '@/components/metalic-text';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import {
+  CheckBadgeIcon,
+  ShieldCheckIcon,
+  MapPinIcon,
+  StarIcon,
+  BeakerIcon,
+  ArrowsPointingOutIcon,
+} from "@heroicons/react/24/solid";
+import MetallicText from "@/components/metalic-text";
 
 export default function ProductsPage() {
   const products = [
@@ -15,21 +22,18 @@ export default function ProductsPage() {
           angles: [
             {
               name: "45° Elbow",
-              image: "/products/Stainless-Steel-45.png", 
-              description: "Precision-formed 45°"
+              image: "/products/Stainless-Steel-45.png",
+              description: "Precision-formed 45°",
             },
             {
               name: "90° Elbow",
               image: "/products/Stainless-Steel-90.png",
-              description: "Standard 90°"
-            }
+              description: "Standard 90°",
+            },
           ],
-          thickness: "0.010\"",
-          features: [
-            "Excellent corrosion resistance",
-            "Weather-tight seal"
-          ],
-          sizes: "1/2\" to 12\" IPS | 1\" to 4\" insulation"
+          thickness: '0.010"',
+          features: ["Excellent corrosion resistance", "Weather-tight seal"],
+          sizes: '1/2" to 12" IPS | 1" to 4" insulation',
         },
         {
           type: "316L Stainless Steel",
@@ -37,21 +41,20 @@ export default function ProductsPage() {
             {
               name: "45° Elbow",
               image: "/products/Stainless-Steel-45.png",
-              description: "Premium 45° angle with enhanced corrosion resistance"
+              description:
+                "Premium 45° angle with enhanced corrosion resistance",
             },
             {
-              name: "90° Elbow", 
+              name: "90° Elbow",
               image: "/products/Stainless-Steel-90.png",
               // description: "Heavy-duty 90° angle for demanding applications"
-            }
+            },
           ],
-          thickness: "0.010\"",
-          features: [
-            "Ideal for coastal/marine environments",
-          ],
-          sizes: "1/2\" to 12\" IPS | 1\" to 4\" insulation"
-        }
-      ]
+          thickness: '0.010"',
+          features: ["Ideal for coastal/marine environments"],
+          sizes: '1/2" to 12" IPS | 1" to 4" insulation',
+        },
+      ],
     },
     {
       category: "Aluminum",
@@ -62,22 +65,22 @@ export default function ProductsPage() {
             {
               name: "45° Elbow",
               image: "/products/Aluminum-45.png",
-              description: "Clean 45° angle"
+              description: "Clean 45° angle",
             },
             {
               name: "90° Elbow",
-              image: "/products/Aluminum-90.png", 
-              description: "Streamlined 90° angle transition"
-            }
+              image: "/products/Aluminum-90.png",
+              description: "Streamlined 90° angle transition",
+            },
           ],
-          thickness: "0.024\"",
+          thickness: '0.024"',
           features: [
             "Factory-applied acrylic exterior coating",
             "Blue epoxy interior moisture barrier",
             "Excellent formability",
-            "Lightweight yet durable"
+            "Lightweight yet durable",
           ],
-          sizes: "1/2\" to 12\" IPS | 1\" to 4\" insulation"
+          sizes: '1/2" to 12" IPS | 1" to 4" insulation',
         },
         {
           type: "Stucco Embossed",
@@ -85,25 +88,25 @@ export default function ProductsPage() {
             {
               name: "45° Elbow",
               image: "/products/Aluminum-45.png",
-              description: "Textured 45° angle for visual appeal"
+              description: "Textured 45° angle for visual appeal",
             },
             {
               name: "90° Elbow",
               image: "/products/Aluminum-90.png",
-              description: "Decorative 90° angle with stucco pattern"
-            }
+              description: "Decorative 90° angle with stucco pattern",
+            },
           ],
-          thickness: "0.024\" (24 gauge)",
+          thickness: '0.024" (24 gauge)',
           features: [
             "Attractive textured finish",
             "Same protective coatings as smooth finish",
             "Hides minor imperfections",
-            "Enhanced grip surface"
+            "Enhanced grip surface",
           ],
-          sizes: "1/2\" to 12\" IPS | 1\" to 4\" insulation"
-        }
-      ]
-    }
+          sizes: '1/2" to 12" IPS | 1" to 4" insulation',
+        },
+      ],
+    },
   ];
 
   return (
@@ -111,7 +114,7 @@ export default function ProductsPage() {
       {/* Hero Section */}
       <section className="relative py-20 md:pt-20 bg-muted">
         <div className="absolute inset-0 bg-[url('/texture-dark.png')] opacity-20"></div>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -122,8 +125,31 @@ export default function ProductsPage() {
               <ShieldCheckIcon className="w-5 h-5 mr-2 capitalize" />
               North American Made Quality
             </div>
-            <MetallicText text="HVAC Elbow Solutions" className="p-[6px] text-4xl md:text-6xl lg:text-7xl font-[900] mb-4" />
-            <MetallicText text="Premium stainless steel and aluminum elbows engineered for durability and performance" className="p-[3px] text-2xl md:text-3xl lg:text-4xl font-[900]" />
+            <Image
+              src="/HVAC-Elbow-Solutions.png"
+              alt="Size Guide"
+              width={1000}
+              height={1000}
+              quality={100}
+              className="mx-auto w-full h-fit object-contain"
+            />
+            <Image
+              src="/Premium-stainless-steel.png"
+              alt="Size Guide"
+              width={1000}
+              height={1000}
+              quality={100}
+              className="mx-auto w-full h-fit object-contain hidden md:block -mt-6"
+            />
+            
+            <Image
+              src="/Premium-stainless-steel-mobile.png"
+              alt="Size Guide"
+              width={1000}
+              height={1000}
+              quality={100}
+              className="mx-auto w-full h-fit object-contain md:hidden px-4"
+            />
           </motion.div>
         </div>
       </section>
@@ -132,7 +158,7 @@ export default function ProductsPage() {
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {products.map((product, index) => (
-            <motion.div 
+            <motion.div
               key={product.category}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -142,18 +168,31 @@ export default function ProductsPage() {
             >
               <div className="flex items-center mb-10">
                 <div className="h-px bg-gradient-to-r from-muted to-primary w-16 mr-4"></div>
-                <h2 className="text-3xl font-bold text-foreground">{product.category} Elbows</h2>
+                <h2 className="text-3xl font-bold text-foreground">
+                  {product.category} Elbows
+                </h2>
               </div>
 
               <div className="grid md:grid-cols-2 gap-12">
                 {product.variants.map((variant) => (
-                  <div key={variant.type} className="bg-card rounded-xl p-6 border border-border hover:border-primary transition-all">
+                  <div
+                    key={variant.type}
+                    className="bg-card rounded-xl p-6 border border-border hover:border-primary transition-all"
+                  >
                     <div className="flex items-start justify-between mb-6">
                       <div>
-                        <h3 className="text-2xl font-bold text-foreground">{variant.type}</h3>
+                        <h3 className="text-2xl font-bold text-foreground">
+                          {variant.type}
+                        </h3>
                         <div className="flex items-center mt-2">
-                          <span className="text-sm bg-primary/10 text-primary px-2 py-1 rounded mr-2">{variant.thickness}</span>
-                          <span className="text-sm bg-muted text-foreground px-2 py-1 rounded">{product.category === "Stainless Steel" ? "T-304L / 316L" : "1100 Alloy"}</span>
+                          <span className="text-sm bg-primary/10 text-primary px-2 py-1 rounded mr-2">
+                            {variant.thickness}
+                          </span>
+                          <span className="text-sm bg-muted text-foreground px-2 py-1 rounded">
+                            {product.category === "Stainless Steel"
+                              ? "T-304L / 316L"
+                              : "1100 Alloy"}
+                          </span>
                         </div>
                       </div>
                       <div className="p-2 bg-primary/10 rounded-lg">
@@ -176,14 +215,22 @@ export default function ProductsPage() {
                               className="object-cover group-hover:scale-105 transition-transform duration-300"
                             />
                           </div>
-                          <h4 className="font-medium text-foreground">{angle.name}</h4>
-                          {angle.description && <p className="text-sm text-foreground">{angle.description}</p>}
+                          <h4 className="font-medium text-foreground">
+                            {angle.name}
+                          </h4>
+                          {angle.description && (
+                            <p className="text-sm text-foreground">
+                              {angle.description}
+                            </p>
+                          )}
                         </div>
                       ))}
                     </div>
 
                     <div className="mb-6">
-                      <h4 className="font-medium text-foreground mb-3">Key Features</h4>
+                      <h4 className="font-medium text-foreground mb-3">
+                        Key Features
+                      </h4>
                       <ul className="space-y-2">
                         {variant.features.map((feature, i) => (
                           <li key={i} className="flex items-start">
@@ -195,7 +242,9 @@ export default function ProductsPage() {
                     </div>
 
                     <div className="bg-card rounded-lg p-4 border border-border">
-                      <h4 className="font-medium text-foreground mb-2">Available Sizes</h4>
+                      <h4 className="font-medium text-foreground mb-2">
+                        Available Sizes
+                      </h4>
                       <p className="text-foreground">{variant.sizes}</p>
                     </div>
                   </div>
@@ -216,52 +265,132 @@ export default function ProductsPage() {
             viewport={{ once: true }}
             className="bg-card rounded-xl shadow-sm p-8 border border-border"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-8">Technical Specifications</h2>
-            
+            <h2 className="text-3xl font-bold text-foreground mb-8">
+              Technical Specifications
+            </h2>
+
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-border">
                 <thead className="bg-muted">
                   <tr>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-foreground uppercase tracking-wider">Material</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-foreground uppercase tracking-wider">Thickness</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-foreground uppercase tracking-wider">Angles</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-foreground uppercase tracking-wider">IPS Range</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-foreground uppercase tracking-wider">Insulation</th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-foreground uppercase tracking-wider">Coatings</th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium text-foreground uppercase tracking-wider"
+                    >
+                      Material
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium text-foreground uppercase tracking-wider"
+                    >
+                      Thickness
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium text-foreground uppercase tracking-wider"
+                    >
+                      Angles
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium text-foreground uppercase tracking-wider"
+                    >
+                      IPS Range
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium text-foreground uppercase tracking-wider"
+                    >
+                      Insulation
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium text-foreground uppercase tracking-wider"
+                    >
+                      Coatings
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="bg-card divide-y divide-border">
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-foreground">304L Stainless Steel</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">0.010"</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">45°, 90°</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">1/2" - 12"</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">1" - 4"</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">None (bare metal)</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-foreground">
+                      304L Stainless Steel
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      0.010"
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      45°, 90°
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      1/2" - 12"
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      1" - 4"
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      None (bare metal)
+                    </td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-foreground">316L Stainless Steel</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">0.010"</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">45°, 90°</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">1/2" - 12"</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">1" - 4"</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">None (bare metal)</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-foreground">
+                      316L Stainless Steel
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      0.010"
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      45°, 90°
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      1/2" - 12"
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      1" - 4"
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      None (bare metal)
+                    </td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-foreground">Aluminum (Smooth)</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">0.024"</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">45°, 90°</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">1/2" - 12"</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">1" - 4"</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">Acrylic exterior + epoxy interior</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-foreground">
+                      Aluminum (Smooth)
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      0.024"
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      45°, 90°
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      1/2" - 12"
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      1" - 4"
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      Acrylic exterior + epoxy interior
+                    </td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-foreground">Aluminum (Stucco)</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">0.024"</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">45°, 90°</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">1/2" - 12"</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">1" - 4"</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">Acrylic exterior + epoxy interior</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-foreground">
+                      Aluminum (Stucco)
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      0.024"
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      45°, 90°
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      1/2" - 12"
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      1" - 4"
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
+                      Acrylic exterior + epoxy interior
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -269,7 +398,6 @@ export default function ProductsPage() {
           </motion.div>
         </div>
       </section>
-
     </main>
   );
 }

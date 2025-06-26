@@ -24,18 +24,40 @@ export default function SizeGuidePage() {
   return (
     <main className="bg-black min-h-screen">
       {/* Hero Section - More Compact */}
-      <section className="relative py-16 md:pt-24 overflow-hidden">
+      <section className="relative pb-16 md:pt-24 pt-28 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
-        <div className="max-w-4xl mx-auto px-4 relative">
+        <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <MetallicText text="Product Size Guide" className="p-[6px] text-4xl md:text-6xl lg:text-7xl font-[900] mb-6" />
-            <MetallicText text="Complete sizing information for all our stainless steel & aluminum products" className="p-[3px] text-2xl md:text-3xl lg:text-4xl font-[900]" />
+            <Image
+              src="/Product-Size-Guide.png"
+              alt="Size Guide"
+              width={1000}
+              height={1000}
+              quality={100}
+              className="mx-auto w-full h-fit object-contain"
+            />
+            <Image
+              src="/Complete-sizing-information.png"
+              alt="Size Guide"
+              width={1000}
+              height={1000}
+              quality={100}
+              className="mx-auto w-full h-fit object-contain hidden md:block -mt-8"
+            />
+            <Image
+              src="/Complete-sizing-information-mobile.png"
+              alt="Size Guide"
+              width={1000}
+              height={1000}
+              quality={100}
+              className="mx-auto w-full h-full object-contain block md:hidden px-4"
+            />
           </motion.div>
         </div>
       </section>
