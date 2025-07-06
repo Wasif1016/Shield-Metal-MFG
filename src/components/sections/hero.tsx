@@ -10,11 +10,15 @@ export default function Hero() {
       {/* Main Content Container */}
       <div className="w-full max-w-[1200px] mx-auto">
         {/* Brand Name */}
-        <h1 className="text-center flex items-center flex-col gap-2 mb-16">
-          <span className="block max-w-[850px] mx-auto text-3xl md:text-6xl font-semibold tracking-wide text-white">
-            PIONEERS IN MANUFACTURING STAINLESS STEEL & ALUMINIUM ELBOWS
-          </span>
-        </h1>
+        <div className="max-w-xl mx-auto mb-8">
+          <Image
+            src="/PIONEERS-IN-MANUFACTURING-STA-06-07-2025.png"
+            alt="Doing Business Across"
+            width={1000}
+            height={1000}
+            className="object-contain "
+          />
+        </div>
 
         <div className="flex flex-col md:flex-row gap-16 pb-16 max-w-6xl mx-auto items-center justify-center">
           <div className="flex-shrink-0 hidden md:block">
@@ -47,20 +51,24 @@ export default function Hero() {
         </div>
 
         <div className="mb-16 max-w-lg mx-auto text-center">
-          <Image
-            src="/DOING-BUSINESS-ACROSS-NORTH.png"
-            alt="Doing Business Across"
-            width={1000}
-            height={1000}
-            className="w-auto h-auto"
-          />
-          <Image
-            src="/WE-OFFER-A-COMPLETE-LINE.png"
-            alt="Doing Business Across"
-            width={1000}
-            height={1000}
-            className="w-auto h-auto px-4"
-          />
+          <div className="max-w-xl mx-auto">
+            <Image
+              src="/DOING-BUSINESS-ACROSS-NORTH.png"
+              alt="Doing Business Across"
+              width={1000}
+              height={1000}
+              className="w-auto h-auto object-contain "
+            />
+          </div>
+          <div className=" max-w-xl mx-auto">
+            <Image
+              src="/WE-OFFER-A-COMPLETE-LINE.png"
+              alt="Doing Business Across"
+              width={1000}
+              height={1000}
+              className="w-auto h-auto object-contain"
+            />
+          </div>
         </div>
 
         {/* Trust Indicators */}
