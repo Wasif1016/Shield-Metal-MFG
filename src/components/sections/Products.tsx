@@ -15,16 +15,13 @@ export default function Products() {
         'Available in 90° & 45° long and short radius',
         'Fits 13mm (1/2") IPS to 300mm (12") IPS',
         '25mm (1") to 100mm (4") thickness',
-        'Stainless Steel Elbows',
-        'Smooth & Embossed',
-        '(24 gauge)',
       ],
     },
     {
       name: 'Aluminum Elbows',
       image: '/Aluminum+90+-+Shield+Metal+DS+homepage.png',
       features: [
-        'High-quality 1100 alloy in 0.024" thickness (24 gauge)',
+        'High-quality 1100 alloy in 0.024" thickness',
         'Available in 90° & 45°, long and short radius',
         'Fits 13mm (1/2") IPS to 300mm (12") IPS',
         '25mm (1") to 100mm (4") thickness',
@@ -59,11 +56,11 @@ export default function Products() {
         </motion.div>
 
         {/* Products Grid */}
-        <div className="flex flex-col md:flex-row justify-center gap-4">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-center gap-4">
           {products.map((product, index) => (
             <motion.div
               key={product.name}
-              className="bg-zinc-950 group shadow-lg rounded-2xl overflow-hidden 
+              className="w-full bg-zinc-950 group shadow-lg rounded-2xl overflow-hidden 
               border border-border hover:shadow-xl transition-all duration-300 
               transform flex flex-col justify-between"
             >

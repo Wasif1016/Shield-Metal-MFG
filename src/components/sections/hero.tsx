@@ -6,17 +6,32 @@ import MetallicText from "../metalic-text";
 
 export default function Hero() {
   return (
-    <div className="min-h-screen pt-16 pb-24 md:pt-20 md:pb-32 bg-black  flex flex-col items-center justify-center px-6">
+    <div className="min-h-screen pt-16 pb-24 md:pt-20 md:pb-36 bg-black  flex flex-col items-center justify-center px-6">
       {/* Main Content Container */}
       <div className="w-full max-w-[1200px] mx-auto">
         {/* Brand Name */}
-        <div className="max-w-xl mx-auto mb-8">
+        <div className="max-w-5xl mx-auto mb-8">
+          {/* - PIONEERS IN MANUFACTURING STAINLESS STEEL & ALUMINUM ELBOWS - */}
+          {/* <img
+            src="/PIONEERS-IN-MANUFACTURING-STA-06-07-2025.png"
+            alt="Doing Business Across"
+            className=""
+          /> */}
           <Image
             src="/PIONEERS-IN-MANUFACTURING-STA-06-07-2025.png"
             alt="Doing Business Across"
             width={1000}
             height={1000}
+            quality={100}
             className="object-contain "
+          />
+        </div>
+
+        <div className="mb-16">
+          <img
+            src="/logo.jpg"
+            alt="Manufacturing facility"
+            className="w-full h-full max-h-[250px] md:max-h-[320px] object-contain"
           />
         </div>
 
@@ -31,13 +46,6 @@ export default function Hero() {
               </Button>
             </Link>
           </div>
-          <div className="">
-            <img
-              src="/logo.jpg"
-              alt="Manufacturing facility"
-              className="w-full h-full max-h-[250px] md:max-h-[250px] object-contain"
-            />
-          </div>
           <div className="flex-shrink-0 hidden md:block">
             <Link href="/contact">
               <Button
@@ -50,23 +58,25 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mb-16 max-w-lg mx-auto text-center">
-          <div className="max-w-xl mx-auto">
+        <div className="mb-16 mx-auto text-center">
+          <div className="max-w-3xl w-full mx-auto">
+            {/* - DOING BUSINESS ACROSS NORTH AMERICA - */}
             <Image
               src="/DOING-BUSINESS-ACROSS-NORTH.png"
               alt="Doing Business Across"
               width={1000}
               height={1000}
-              className="w-auto h-auto object-contain "
+              className="w-full h-auto object-contain "
             />
           </div>
-          <div className=" max-w-xl mx-auto">
+          <div className="w-full max-w-2xl mx-auto -mt-6">
+            {/* - WE OFFER A COMPLETE LINE OF STAINLESS STEEL & ALUMINUM FITTING COVER BANDING, WING CLIPS, CUSTOM FLAT SHEETS - */}
             <Image
               src="/WE-OFFER-A-COMPLETE-LINE.png"
               alt="Doing Business Across"
               width={1000}
               height={1000}
-              className="w-auto h-auto object-contain"
+              className="w-full  h-auto object-contain"
             />
           </div>
         </div>

@@ -32,6 +32,7 @@ export default function ProductsPage() {
             },
           ],
           thickness: '0.010"',
+          thicknessRightSideValue: 'T-304L',
           features: ["Excellent corrosion resistance", "Weather-tight seal"],
           sizes: '1/2" to 12" IPS | 1" to 4" insulation',
         },
@@ -51,6 +52,7 @@ export default function ProductsPage() {
             },
           ],
           thickness: '0.010"',
+          thicknessRightSideValue: 'T-316L',
           features: ["Ideal for coastal/marine environments"],
           sizes: '1/2" to 12" IPS | 1" to 4" insulation',
         },
@@ -74,6 +76,7 @@ export default function ProductsPage() {
             },
           ],
           thickness: '0.024"',
+          thicknessRightSideValue: '1100 Alloy',
           features: [
             "Factory-applied acrylic exterior coating",
             "Blue epoxy interior moisture barrier",
@@ -96,7 +99,8 @@ export default function ProductsPage() {
               description: "Decorative 90° angle with stucco pattern",
             },
           ],
-          thickness: '0.024" (24 gauge)',
+          thickness: '0.024"',
+          thicknessRightSideValue: '1100 Alloy',
           features: [
             "Attractive textured finish",
             "Same protective coatings as smooth finish",
@@ -189,9 +193,7 @@ export default function ProductsPage() {
                             {variant.thickness}
                           </span>
                           <span className="text-sm bg-muted text-foreground px-2 py-1 rounded">
-                            {product.category === "Stainless Steel"
-                              ? "T-304L / 316L"
-                              : "1100 Alloy"}
+                            {variant.thicknessRightSideValue}
                           </span>
                         </div>
                       </div>
@@ -218,11 +220,11 @@ export default function ProductsPage() {
                           <h4 className="font-medium text-foreground">
                             {angle.name}
                           </h4>
-                          {angle.description && (
+                          {/* {angle.description && (
                             <p className="text-sm text-foreground">
                               {angle.description}
                             </p>
-                          )}
+                          )} */}
                         </div>
                       ))}
                     </div>

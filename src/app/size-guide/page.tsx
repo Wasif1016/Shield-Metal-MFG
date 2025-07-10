@@ -8,7 +8,6 @@ import {
   WrenchIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
-import MetallicText from "@/components/metalic-text";
 
 export default function SizeGuidePage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -97,6 +96,10 @@ export default function SizeGuidePage() {
                       <ArrowRightIcon className="w-3 h-3 text-blue-500" />
                       <span>45° Angle</span>
                     </li>
+                    <li className="flex items-center gap-2">
+                      <ArrowRightIcon className="w-3 h-3 text-blue-500" />
+                      <span>Smooth & Embossed</span>
+                    </li>
                   </ul>
                 </div>
               </motion.div>
@@ -126,7 +129,11 @@ export default function SizeGuidePage() {
                     </li>
                     <li className="flex items-center gap-2">
                       <ArrowRightIcon className="w-3 h-3 text-green-500" />
-                      <span>45° in Smooth & Embossed</span>
+                      <span>45° Angle</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <ArrowRightIcon className="w-3 h-3 text-green-500" />
+                      <span>Smooth & Embossed</span>
                     </li>
                   </ul>
                 </div>

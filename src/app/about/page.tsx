@@ -14,14 +14,13 @@ const stats = [
   { id: 1, name: "Years of Experience", value: "56+", icon: ClockIcon },
   { id: 2, name: "Products Manufactured", value: "10000+", icon: ChartBarIcon },
   { id: 3, name: "Satisfied Customers", value: "150000+", icon: UserGroupIcon },
-  { id: 4, name: "Quality Standards", value: "100%", icon: TrophyIcon },
 ];
 
 export default function AboutPage() {
   return (
     <main className="bg-black">
       {/* Hero Section */}
-      <section className="relative py-24 md:pt-20 md:pb-32 overflow-hidden">
+      <section className="relative py-24 md:pt-28 md:pb-20 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
@@ -45,31 +44,6 @@ export default function AboutPage() {
               over 56+ years.
             </p>
           </motion.div>
-
-          {/* Stats Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-5 border border-white/10"
-              >
-                <div className="flex items-center space-x-4">
-                  <div className="p-3 bg-zinc-800 rounded-lg">
-                    <stat.icon className="w-6 h-6 text-blue-500" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-white">
-                      {stat.value}
-                    </p>
-                    <p className="text-gray-300">{stat.name}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -164,77 +138,109 @@ export default function AboutPage() {
       {/* Values Section */}
       <section className="py-24 bg-zinc-900/50">
         <div className="max-w-7xl mx-auto px-4">
+          {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16 max-w-xl mx-auto"
+            className="text-center mb-10"
           >
             <Image
               src="/Our-Core-Values.png"
-              alt="Size Guide"
+              alt="Our Core Values"
               width={1000}
               height={1000}
               quality={100}
-              className="mx-auto w-full h-fit object-contain"
+              className="mx-auto w-full h-fit object-contain max-w-lg"
             />
-            <Image
-              src="/The-principles-that-guide.png"
-              alt="Size Guide"
-              width={1000}
-              height={1000}
-              quality={100}
-              className="mx-auto w-full h-fit object-contain hidden md:block -mt-4"
-            />
-            <Image
-              src="/The-principles-that-guide-mobile.png"
-              alt="Size Guide"
-              width={1000}
-              height={1000}
-              quality={100}
-              className="mx-auto w-full h-fit object-contain md:hidden px-4"
-            />
+            <div className="mt-2">
+              <Image
+                src="/The-principles-that-guide.png"
+                alt="The principles that guide us"
+                width={1000}
+                height={1000}
+                quality={100}
+                className="mx-auto w-full h-fit object-contain hidden md:block max-w-lg"
+              />
+              <Image
+                src="/The-principles-that-guide-mobile.png"
+                alt="The principles that guide us"
+                width={1000}
+                height={1000}
+                quality={100}
+                className="mx-auto w-full h-fit object-contain md:hidden px-4"
+              />
+            </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Quality First",
-                description:
-                  "We maintain the highest standards in every product we manufacture.",
-                icon: TrophyIcon,
-              },
-              {
-                title: "Customer Focus",
-                description:
-                  "Your satisfaction is our top priority, with fast and friendly service.",
-                icon: UserGroupIcon,
-              },
-              {
-                title: "Experience",
-                description:
-                  "56+ years of expertise in metal manufacturing solutions.",
-                icon: ClockIcon,
-              },
-            ].map((value, index) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
-              >
-                <div className="p-3 bg-zinc-800 rounded-lg w-fit mb-6">
-                  <value.icon className="w-6 h-6 text-blue-500" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {value.title}
-                </h3>
-                <p className="text-gray-300">{value.description}</p>
-              </motion.div>
-            ))}
+          <div className="space-y-6">
+            {/* Stats Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {stats.map((stat) => (
+                <motion.div
+                  key={stat.id}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.4 }}
+                  viewport={{ once: true }}
+                  className="bg-zinc-900/50 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className="p-3 bg-zinc-800 rounded-lg">
+                      <stat.icon className="w-6 h-6 text-blue-500" />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold text-white">
+                        {stat.value}
+                      </p>
+                      <p className="text-gray-300">{stat.name}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Core Values Grid */}
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {[
+                {
+                  title: "Quality First",
+                  description:
+                    "We maintain the highest standards in every product we manufacture.",
+                  icon: TrophyIcon,
+                },
+                {
+                  title: "Customer Focus",
+                  description:
+                    "Your satisfaction is our priority. Fast and friendly service, always.",
+                  icon: UserGroupIcon,
+                },
+                {
+                  title: "Experience",
+                  description:
+                    "56+ years of expertise in metal manufacturing solutions.",
+                  icon: ClockIcon,
+                },
+              ].map((value) => (
+                <motion.div
+                  key={value.title}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.4 }}
+                  viewport={{ once: true }}
+                  className="bg-zinc-900/50 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+                >
+                  <div className="p-3 bg-zinc-800 rounded-lg w-fit mb-4">
+                    <value.icon className="w-6 h-6 text-blue-500" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-300">{value.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
