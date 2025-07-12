@@ -176,10 +176,10 @@ export default function SizeGuidePage() {
                       </h3>
                       <div
                         className="relative h-48 rounded-lg overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]"
-                        onClick={() => openFullscreen("/size-guide-1.jpg")}
+                        onClick={() => openFullscreen("/size-90-ells.jpg")}
                       >
                         <Image
-                          src="/size-guide-1.jpg"
+                          src="/size-90-ells.jpg"
                           alt="Size Guide Reference"
                           fill
                           className="object-contain bg-zinc-800"
@@ -193,10 +193,10 @@ export default function SizeGuidePage() {
                       </h3>
                       <div
                         className="relative h-40 rounded-lg overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]"
-                        onClick={() => openFullscreen("/size-guide-2.jpg")}
+                        onClick={() => openFullscreen("/size-90-short.jpg")}
                       >
                         <Image
-                          src="/size-guide-2.jpg"
+                          src="/size-90-short.jpg"
                           alt="Stainless Steel Specifications"
                           fill
                           className="object-contain"
@@ -212,10 +212,10 @@ export default function SizeGuidePage() {
                       </h3>
                       <div
                         className="relative h-40 rounded-lg overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]"
-                        onClick={() => openFullscreen("/size-guide-3.jpg")}
+                        onClick={() => openFullscreen("/size-45-ells.jpg")}
                       >
                         <Image
-                          src="/size-guide-3.jpg"
+                          src="/size-45-ells.jpg"
                           alt="Aluminum Specifications"
                           fill
                           className="object-contain bg-zinc-800"

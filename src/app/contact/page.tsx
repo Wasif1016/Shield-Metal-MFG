@@ -178,6 +178,9 @@ export default function ContactPage() {
                   <h3 className="text-3xl font-semibold text-white">
                     Get in Touch Directly
                   </h3>
+                  <p className="text-lg">
+                    Feel free to contact us directly from these resources or fill out the form.
+                  </p>
 
                   <div className="space-y-6">
                     <div className="flex items-center space-x-4">
@@ -234,14 +237,6 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="mt-8 pt-8 border-t border-white/10">
-                    <div className="space-y-2">
-                      <div className="flex justify-between">
-                        <span>Monday - Friday</span>
-                        <span>6:30 AM - 2:45 PM</span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </motion.div>
 
