@@ -199,7 +199,7 @@ export default function SizeGuidePage() {
                           src="/size-guide-2.jpg"
                           alt="Stainless Steel Specifications"
                           fill
-                          className="object-contain bg-zinc-800"
+                          className="object-contain"
                         />
                       </div>
                       {/* <p className="text-xs text-gray-200">90° - 90°SR - 45° - 0.0100"</p> */}

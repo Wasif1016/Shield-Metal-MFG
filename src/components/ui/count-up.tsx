@@ -29,15 +29,31 @@ export default function CountUp({
 }: CountUpProps) {
     const ref = useRef<HTMLSpanElement>(null);
     
-    // Convert string values to numbers safely
-    const toNumber = typeof to === 'string' ? parseFloat(to.replace(/[^\d.-]/g, '')) || 0 : to;
-    const fromNumber = typeof from === 'string' ? parseFloat(from.replace(/[^\d.-]/g, '')) || 0 : from;
+    // Extract number and suffix from the 'to' value
+    const getSuffixAndNumber = (value: string | number) => {
+        if (typeof value === 'string') {
+            const match = value.match(/^(\d+\.?\d*)(.*)$/);
+            if (match) {
+                return {
+                    number: parseFloat(match[1]),
+                    suffix: match[2]
+                };
+            }
+        }
+        return {
+            number: Number(value),
+            suffix: ''
+        };
+    };
+
+    const toValue = getSuffixAndNumber(to);
+    const fromValue = getSuffixAndNumber(from);
     
-    const motionValue = useMotionValue(Number(direction === "down" ? toNumber : fromNumber));
+    const motionValue = useMotionValue(Number(direction === "down" ? toValue.number : fromValue.number));
 
     // Calculate damping and stiffness based on duration
-    const damping = 20 + 40 * (1 / duration); // Adjust this formula for finer control
-    const stiffness = 100 * (1 / duration);   // Adjust this formula for finer control
+    const damping = 20 + 40 * (1 / duration);
+    const stiffness = 100 * (1 / duration);
 
     const springValue = useSpring(motionValue, {
         damping,
@@ -46,12 +62,13 @@ export default function CountUp({
 
     const isInView = useInView(ref, { once: true, margin: "0px" });
 
-    // Set initial text content to the initial value based on direction
+    // Set initial text content
     useEffect(() => {
         if (ref.current) {
-            ref.current.textContent = String(direction === "down" ? to : from);
+            const initialValue = direction === "down" ? toValue : fromValue;
+            ref.current.textContent = `${initialValue.number}${initialValue.suffix}`;
         }
-    }, [from, to, direction]);
+    }, [from, to, direction, toValue, fromValue]);
 
     // Start the animation when in view and startWhen is true
     useEffect(() => {
@@ -61,21 +78,21 @@ export default function CountUp({
             }
 
             const timeoutId = setTimeout(() => {
-                motionValue.set(Number(direction === "down" ? fromNumber : toNumber));
-            }, delay * 1000);
+                motionValue.set(Number(direction === "down" ? fromValue.number : toValue.number));
+            }, delay * 100);
 
             const durationTimeoutId = setTimeout(() => {
                 if (typeof onEnd === "function") {
                     onEnd();
                 }
-            }, delay * 1000 + duration * 1000);
+            }, delay * 100 + duration * 100);
 
             return () => {
                 clearTimeout(timeoutId);
                 clearTimeout(durationTimeoutId);
             };
         }
-    }, [isInView, startWhen, motionValue, direction, fromNumber, toNumber, delay, onStart, onEnd, duration]);
+    }, [isInView, startWhen, motionValue, direction, fromValue.number, toValue.number, delay, onStart, onEnd, duration]);
 
     // Update text content with formatted number on spring value change
     useEffect(() => {
@@ -91,16 +108,16 @@ export default function CountUp({
                     Math.abs(latest)
                 );
 
-                ref.current.textContent = typeof to === 'string' && latest >= toNumber
-                    ? to 
-                    : separator
-                        ? formattedNumber.replace(/,/g, separator)
-                        : formattedNumber;
+                const displayNumber = separator
+                    ? formattedNumber.replace(/,/g, separator)
+                    : formattedNumber;
+
+                ref.current.textContent = `${displayNumber}${toValue.suffix}`;
             }
         });
 
         return () => unsubscribe();
-    }, [springValue, separator, to, toNumber]);
+    }, [springValue, separator, toValue.suffix]);
 
     return <span className={`${className}`} ref={ref} />;
 }

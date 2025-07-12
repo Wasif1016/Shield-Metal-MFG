@@ -57,7 +57,7 @@ export default function Navbar() {
           {/* Hamburger Menu Button - Visible on all screen sizes */}
           <button 
             onClick={toggleMenu} 
-            className="text-white p-2 focus:outline-none z-50"
+            className="text-white p-2 focus:outline-none z-50 cursor-pointer"
             aria-label="Toggle menu"
           >
             <svg 

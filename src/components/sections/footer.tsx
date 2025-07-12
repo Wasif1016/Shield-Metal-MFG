@@ -31,7 +31,7 @@ export default function Footer() {
           <div className="md:col-span-1 text-center">
             <h4 className="text-lg font-semibold mb-4">Working Hours</h4>
             <p className="text-gray-100 text-base">
-              Monday - Friday: 6:30am to 2:45pm PST
+              Monday - Friday 6.30AM to 3PM PST
             </p>
           </div>
 

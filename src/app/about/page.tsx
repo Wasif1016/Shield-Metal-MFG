@@ -12,8 +12,8 @@ import MetallicText from "@/components/metalic-text";
 
 const stats = [
   { id: 1, name: "Years of Experience", value: "56+", icon: ClockIcon },
-  { id: 2, name: "Products Manufactured", value: "10000+", icon: ChartBarIcon },
-  { id: 3, name: "Satisfied Customers", value: "150000+", icon: UserGroupIcon },
+  { id: 2, name: "Products Manufactured", value: "50K+", icon: ChartBarIcon },
+  { id: 3, name: "Satisfied Customers", value: "1M+", icon: UserGroupIcon },
 ];
 
 export default function AboutPage() {
@@ -124,7 +124,7 @@ export default function AboutPage() {
               className="relative max-h-[500px] h-full rounded-2xl overflow-hidden"
             >
               <Image
-                src="/about-pic.jpg"
+                src="/about-pic.png"
                 alt="Shield Metal Manufacturing Facility"
                 fill
                 className="object-cover"

@@ -7,6 +7,7 @@ import {
   ClockIcon,
   CheckIcon,
   ExclamationTriangleIcon,
+  EnvelopeIcon,
 } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -84,70 +85,60 @@ export default function Contact() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="w-full h-full bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 flex flex-col justify-between"
+            className="w-full h-full bg-zinc-900/50 backdrop-blur-sm rounded-2xl py-6 px-8 border border-white/10 flex flex-col justify-between"
           >
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-white">
                 Get in Touch Directly
               </h3>
-              <Image
-                src="/other-logo.png"
-                alt="Shield Metal Industries"
-                width={500}
-                height={400}
-                className="w-auto h-auto"
-              />
-            </div>
 
-            <div className="space-y-6 mt-8">
-              <div className="">
-                <h4 className="text-xl font-semibold text-white mb-4">
-                  Eastern & Central USA Customers
-                </h4>
-                <p className="text-gray-300 mb-4">
-                  IF YOU ARE IN THE EASTERN OR CENTRAL USA PLEASE CONTACT
-                  CHESNUTT INSULATION DIRECTLY.
-                </p>
-                <div className="space-y-3">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <PhoneIcon className="w-5 h-5 text-blue-500" />
                   <div>
-                    <span className="text-gray-300">Phone:</span>
-                    <a
-                      href="tel:864-457-4121"
-                      className="text-blue-400 hover:text-blue-300 ml-2"
-                    >
-                      864-457-4121
-                    </a>
-                  </div>
-                  <div>
-                    <span className="text-gray-300">Toll Free:</span>
-                    <a
-                      href="tel:1-800-222-5077"
-                      className="text-blue-400 hover:text-blue-300 ml-2"
-                    >
-                      1-800-222-5077
-                    </a>
-                  </div>
-                  <div>
-                    <span className="text-gray-300">Email Us At:</span>
-                    <a
-                      href="mailto:SHIELD-METAL-MFG@TELUS.NET"
-                      className="text-blue-400 hover:text-blue-300 ml-2"
-                    >
-                      SHIELD-METAL-MFG@TELUS.NET
-                    </a>
-                  </div>
-                  <div>
-                    <span className="text-gray-300">Website:</span>
-                    <a
-                      href="https://www.chesnuttassociates.com/contact/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-400 hover:text-blue-300 ml-2"
-                    >
-                      www.chesnuttassociates.com/contact/
-                    </a>
+                    <p className="">
+                      <a href="tel:604-594-7571" className="">604-594-7571</a>
+                      {" "}/{" "}
+                      <a href="tel:604-653-6737" className="">604-653-6737</a>
+                    </p>
                   </div>
                 </div>
+
+                <div className="flex items-center space-x-3">
+                  <MapPinIcon className="w-5 h-5 text-blue-500" />
+                  <p className="">
+                    12694 82 AVENUE<br />
+                    SURREY, BC V3W 3G1
+                  </p>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <ClockIcon className="w-5 h-5 text-blue-500" />
+                  <p className="">Mon-Fri, 6:30am - 2:45pm PST</p>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <EnvelopeIcon className="w-5 h-5 text-blue-500" />
+                  <a
+                    href="mailto:SHIELD-METAL-MFG@TELUS.NET"
+                    className=" flex items-center"
+                  >
+                    <span className="mr-2">SHIELD-METAL-MFG@TELUS.NET</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Map */}
+              <div className="w-full h-[150px] rounded-xl overflow-hidden mt-6">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2609.533186123841!2d-122.8897611!3d49.1524097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d9ec8fdb4c45%3A0x611997813c0d3739!2s12694%2082%20Ave%2C%20Surrey%2C%20BC%20V3W%203G1%2C%20Canada!5e0!3m2!1sen!2s!4v1709764431705!5m2!1sen!2s"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </motion.div>
@@ -292,6 +283,62 @@ export default function Contact() {
             </form>
           </motion.div>
         </div>
+
+        {/* Chesnutt Contact Information */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-16  rounded-2xl px-8 py-12 border border-white/10 text-center max-w-2xl mx-auto"
+        >
+          <h3 className="text-2xl font-semibold text-white mb-6">
+            Contact Chesnutt
+          </h3>
+          <p className=" max-w-xl mx-auto mb-6 uppercase">
+            IF YOU ARE IN THE EASTERN OR CENTRAL USA PLEASE CONTACT CHESNUTT INSULATION DIRECTLY.
+          </p>
+
+          <Image
+            src="/other-logo.jpg"
+            alt="Chesnutt Logo"
+            width={200}
+            height={100}
+            className="mx-auto mb-6"
+          />
+
+          <div className="space-y-3">
+            <div>
+              <span className="">Phone: </span>
+              <a
+                href="tel:864-457-4121"
+                className=""
+              >
+                864-457-4121
+              </a>
+            </div>
+            <div>
+              <span className="">Toll Free: </span>
+              <a
+                href="tel:1-800-222-5077"
+                className=""
+              >
+                1-800-222-5077
+              </a>
+            </div>
+            <div>
+              <span className="">Website: </span>
+              <a
+                href="https://chesnuttassociates.com/contact/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300"
+              >
+                chesnuttassociates.com/contact/
+              </a>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

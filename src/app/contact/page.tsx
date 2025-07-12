@@ -10,6 +10,8 @@ import {
 } from "@heroicons/react/24/outline";
 import Script from "next/script";
 import Image from "next/image";
+import { AnimatePresence } from "framer-motion";
+import { CheckIcon, ExclamationTriangleIcon } from "@heroicons/react/24/solid";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -77,7 +79,7 @@ export default function ContactPage() {
                   className="object-contain px-8"
                 />
               </div>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto uppercase">
+              <p className="text-xl  max-w-2xl mx-auto uppercase">
                 Have questions about our products? We're here to help and answer
                 any questions you might have.
               </p>
@@ -101,14 +103,23 @@ export default function ContactPage() {
                   <PhoneIcon className="w-6 h-6 text-blue-500" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                <a
-                  href="tel:864-457-4121"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
-                >
-                  864-457-4121
-                </a>
-                <p className="text-sm text-gray-400 mt-2">
-                  Mon-Fri, 6:30am - 2:45pm PST
+                <div className="flex gap-2">
+                  <a
+                    href="tel:604-594-7571"
+                    className=" hover:text-blue-400 transition-colors"
+                  >
+                    604-594-7571 
+                  </a>
+                  <span className="text-white">|</span>
+                  <a
+                    href="tel:604-653-6737"
+                    className=" hover:text-blue-400 transition-colors"
+                  >
+                    604-653-6737
+                  </a>
+                </div>
+                <p className="text-sm mt-2">
+                  Monday - Friday 6.30AM to 3PM PST
                 </p>
               </motion.div>
 
@@ -126,13 +137,11 @@ export default function ContactPage() {
                 <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
                 <a
                   href="mailto:SHIELD-METAL-MFG@TELUS.NET"
-                  className="text-gray-300 hover:text-green-400 transition-colors"
+                  className=" hover:text-green-400 transition-colors"
                 >
                   SHIELD-METAL-MFG@TELUS.NET
                 </a>
-                <p className="text-sm text-gray-400 mt-2">
-                  We'll respond within 24 hours
-                </p>
+                <p className="text-sm mt-2">We'll respond within 24 hours</p>
               </motion.div>
 
               {/* Address */}
@@ -149,7 +158,7 @@ export default function ContactPage() {
                 <h3 className="text-lg font-semibold text-white mb-2">
                   Visit Us
                 </h3>
-                <p className="text-gray-300">
+                <p className="">
                   12694 82 AVENUE
                   <br />
                   SURREY, BC V3W 3G1
@@ -163,68 +172,73 @@ export default function ContactPage() {
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="w-full h-full bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 flex flex-col justify-between"
+                className="w-full h-full bg-zinc-900/50 backdrop-blur-sm rounded-2xl py-8 px-8 border border-white/10"
               >
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-semibold text-white">
+                <div className="space-y-8">
+                  <h3 className="text-3xl font-semibold text-white">
                     Get in Touch Directly
                   </h3>
-                  <Image
-                    src="/other-logo.png"
-                    alt="Shield Metal Industries"
-                    width={500}
-                    height={400}
-                    className="w-auto h-auto"
-                  />
-                </div>
 
-                <div className="space-y-6 mt-8">
-                  <div className="">
-                    <h4 className="text-xl font-semibold text-white mb-4">
-                      Eastern & Central USA Customers
-                    </h4>
-                    <p className="text-gray-300 mb-4">
-                      IF YOU ARE IN THE EASTERN OR CENTRAL USA PLEASE CONTACT
-                      CHESNUTT INSULATION DIRECTLY.
-                    </p>
-                    <div className="space-y-3">
-                      <div>
-                        <span className="text-gray-300">Phone:</span>
-                        <a
-                          href="tel:864-457-4121"
-                          className="text-blue-400 hover:text-blue-300 ml-2"
-                        >
-                          864-457-4121
-                        </a>
+                  <div className="space-y-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="bg-blue-500/10 p-3 rounded-xl">
+                        <PhoneIcon className="w-6 h-6 text-blue-500" />
                       </div>
                       <div>
-                        <span className="text-gray-300">Toll Free:</span>
-                        <a
-                          href="tel:1-800-222-5077"
-                          className="text-blue-400 hover:text-blue-300 ml-2"
-                        >
-                          1-800-222-5077
-                        </a>
+                        <p className="text-lg">
+                          <a
+                            href="tel:604-594-7571"
+                            className="hover:text-blue-400 transition-colors"
+                          >
+                            604-594-7571
+                          </a>{" "}
+                          /{" "}
+                          <a
+                            href="tel:604-653-6737"
+                            className="hover:text-blue-400 transition-colors"
+                          >
+                            604-653-6737
+                          </a>
+                        </p>
                       </div>
-                      <div>
-                        <span className="text-gray-300">Email Us At:</span>
-                        <a
-                          href="mailto:SHIELD-METAL-MFG@TELUS.NET"
-                          className="text-blue-400 hover:text-blue-300 ml-2"
-                        >
-                          SHIELD-METAL-MFG@TELUS.NET
-                        </a>
+                    </div>
+
+                    <div className="flex items-center space-x-4">
+                      <div className="bg-purple-500/10 p-3 rounded-xl">
+                        <MapPinIcon className="w-6 h-6 text-purple-500" />
                       </div>
-                      <div>
-                        <span className="text-gray-300">Website:</span>
-                        <a
-                          href="https://www.chesnuttassociates.com/contact/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-400 hover:text-blue-300 ml-2 text-wrap"
-                        >
-                          chesnuttassociates.com/contact/
-                        </a>
+                      <p className="text-lg">
+                        12694 82 AVENUE
+                        <br />
+                        SURREY, BC V3W 3G1
+                      </p>
+                    </div>
+
+                    <div className="flex items-center space-x-4">
+                      <div className="bg-green-500/10 p-3 rounded-xl">
+                        <ClockIcon className="w-6 h-6 text-green-500" />
+                      </div>
+                      <p className="text-lg">Mon-Fri, 6:30am - 2:45pm PST</p>
+                    </div>
+
+                    <div className="flex items-center space-x-4">
+                      <div className="bg-orange-500/10 p-3 rounded-xl">
+                        <EnvelopeIcon className="w-6 h-6 text-orange-500" />
+                      </div>
+                      <a
+                        href="mailto:SHIELD-METAL-MFG@TELUS.NET"
+                        className="flex items-center text-lg hover:text-blue-400 transition-colors"
+                      >
+                        <span>SHIELD-METAL-MFG@TELUS.NET</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 pt-8 border-t border-white/10">
+                    <div className="space-y-2">
+                      <div className="flex justify-between">
+                        <span>Monday - Friday</span>
+                        <span>6:30 AM - 2:45 PM</span>
                       </div>
                     </div>
                   </div>
@@ -239,11 +253,11 @@ export default function ContactPage() {
                 viewport={{ once: true }}
                 className="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
               >
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium text-gray-300 mb-2"
+                      className="block text-sm font-medium mb-2"
                     >
                       Full Name
                     </label>
@@ -251,42 +265,46 @@ export default function ContactPage() {
                       type="text"
                       id="name"
                       required
-                      className="w-full px-4 py-3 bg-zinc-800/50 border border-white/10 rounded-xl
-                        text-white placeholder-gray-500 focus:outline-none focus:ring-2 
-                        focus:ring-blue-500/50 transition-all duration-300"
                       value={formData.name}
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
                       }
+                      className="w-full px-4 py-3 bg-zinc-800 border border-white/10 
+                      rounded-xl placeholder-gray-500 
+                      focus:outline-none focus:ring-2 focus:ring-blue-500
+                      transition-all duration-300"
+                      placeholder="Enter your name"
                     />
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                       <label
                         htmlFor="email"
-                        className="block text-sm font-medium text-gray-300 mb-2"
+                        className="block text-sm font-medium mb-2"
                       >
-                        Email
+                        Email Address
                       </label>
                       <input
                         type="email"
                         id="email"
                         required
-                        className="w-full px-4 py-3 bg-zinc-800/50 border border-white/10 rounded-xl
-                          text-white placeholder-gray-500 focus:outline-none focus:ring-2 
-                          focus:ring-blue-500/50 transition-all duration-300"
                         value={formData.email}
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
                         }
+                        className="w-full px-4 py-3 bg-zinc-800 border border-white/10 
+                        rounded-xl placeholder-gray-500 
+                        focus:outline-none focus:ring-2 focus:ring-blue-500
+                        transition-all duration-300"
+                        placeholder="Enter your email"
                       />
                     </div>
 
                     <div>
                       <label
                         htmlFor="phone"
-                        className="block text-sm font-medium text-gray-300 mb-2"
+                        className="block text-sm font-medium mb-2"
                       >
                         Phone Number
                       </label>
@@ -294,13 +312,15 @@ export default function ContactPage() {
                         type="tel"
                         id="phone"
                         required
-                        className="w-full px-4 py-3 bg-zinc-800/50 border border-white/10 rounded-xl
-                          text-white placeholder-gray-500 focus:outline-none focus:ring-2 
-                          focus:ring-blue-500/50 transition-all duration-300"
                         value={formData.phone}
                         onChange={(e) =>
                           setFormData({ ...formData, phone: e.target.value })
                         }
+                        className="w-full px-4 py-3 bg-zinc-800 border border-white/10 
+                        rounded-xl placeholder-gray-500 
+                        focus:outline-none focus:ring-2 focus:ring-blue-500
+                        transition-all duration-300"
+                        placeholder="Enter your phone"
                       />
                     </div>
                   </div>
@@ -308,37 +328,39 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium text-gray-300 mb-2"
+                      className="block text-sm font-medium mb-2"
                     >
                       Message
                     </label>
                     <textarea
                       id="message"
                       required
-                      rows={5}
-                      className="w-full px-4 py-3 bg-zinc-800/50 border border-white/10 rounded-xl
-                        text-white placeholder-gray-500 focus:outline-none focus:ring-2 
-                        focus:ring-blue-500/50 transition-all duration-300 resize-none"
+                      rows={4}
                       value={formData.message}
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
+                      className="w-full px-4 py-3 bg-zinc-800 border border-white/10 
+                      rounded-xl placeholder-gray-500 resize-none
+                      focus:outline-none focus:ring-2 focus:ring-blue-500
+                      transition-all duration-300"
+                      placeholder="Tell us about your project"
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="w-full py-4 px-6 bg-gradient-to-r from-blue-600 to-blue-700 
-                      text-white font-semibold rounded-xl hover:from-blue-700 hover:to-blue-800 
-                      transform hover:scale-[1.02] transition-all duration-300 
-                      disabled:opacity-50 disabled:hover:scale-100 
-                      focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+                    className="w-full py-3 px-6 bg-blue-500 text-white font-medium 
+                    rounded-xl hover:bg-blue-600 
+                    transition-all duration-300 
+                    disabled:opacity-50 disabled:cursor-not-allowed
+                    flex items-center justify-center space-x-2"
                   >
                     {status === "sending" ? (
-                      <div className="flex items-center justify-center">
+                      <>
                         <svg
-                          className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                          className="animate-spin h-5 w-5"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -357,26 +379,87 @@ export default function ContactPage() {
                             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                           ></path>
                         </svg>
-                        Sending...
-                      </div>
+                        <span>Sending...</span>
+                      </>
                     ) : (
                       "Send Message"
                     )}
                   </button>
 
-                  {status === "success" && (
-                    <div className="bg-green-500/10 text-green-400 p-4 rounded-xl text-center">
-                      Message sent successfully! We'll get back to you soon.
-                    </div>
-                  )}
-                  {status === "error" && (
-                    <div className="bg-red-500/10 text-red-400 p-4 rounded-xl text-center">
-                      Failed to send message. Please try again later.
-                    </div>
-                  )}
+                  {/* Status Messages */}
+                  <AnimatePresence>
+                    {status === "success" && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0 }}
+                        className="flex items-center space-x-2 text-green-500"
+                      >
+                        <CheckIcon className="w-5 h-5" />
+                        <span>Message sent successfully!</span>
+                      </motion.div>
+                    )}
+                    {status === "error" && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0 }}
+                        className="flex items-center space-x-2 text-red-500"
+                      >
+                        <ExclamationTriangleIcon className="w-5 h-5" />
+                        <span>Failed to send message. Please try again.</span>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </form>
               </motion.div>
             </div>
+
+            {/* Chesnutt Contact Information */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mt-16 rounded-2xl px-8 py-12 border border-white/10 text-center max-w-2xl mx-auto"
+            >
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                Contact Chesnutt
+              </h3>
+              <p className="max-w-xl mx-auto mb-6 uppercase">
+                IF YOU ARE IN THE EASTERN OR CENTRAL USA PLEASE CONTACT CHESNUTT
+                INSULATION DIRECTLY.
+              </p>
+
+              <Image
+                src="/other-logo.jpg"
+                alt="Chesnutt Logo"
+                width={200}
+                height={100}
+                className="mx-auto mb-6"
+              />
+
+              <div className="space-y-3">
+                <div>
+                  <span>Phone: </span>
+                  <a href="tel:864-457-4121">864-457-4121</a>
+                </div>
+                <div>
+                  <span>Toll Free: </span>
+                  <a href="tel:1-800-222-5077">1-800-222-5077</a>
+                </div>
+                <div>
+                  <span>Website: </span>
+                  <a
+                    href="https://chesnuttassociates.com/contact/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    chesnuttassociates.com/contact/
+                  </a>
+                </div>
+              </div>
+            </motion.div>
 
             <div className="mt-20">
               {/* Map */}

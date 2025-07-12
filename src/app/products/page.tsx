@@ -33,7 +33,7 @@ export default function ProductsPage() {
           ],
           thickness: '0.010"',
           thicknessRightSideValue: 'T-304L',
-          features: ["Excellent corrosion resistance", "Weather-tight seal"],
+          features: ["Excellent corrosion resistance", "Weather-tight seal", "Most common fitting", "Excellent corrosion resistance and strength", "Preferred in high traffic areas"],
           sizes: '1/2" to 12" IPS | 1" to 4" insulation',
         },
         {
@@ -53,7 +53,7 @@ export default function ProductsPage() {
           ],
           thickness: '0.010"',
           thicknessRightSideValue: 'T-316L',
-          features: ["Ideal for coastal/marine environments"],
+          features: ["Ideal for coastal/marine environments", "Strong amounts of nickel and chromium creating sustainable corrosion resistance"],
           sizes: '1/2" to 12" IPS | 1" to 4" insulation',
         },
       ],
@@ -82,6 +82,9 @@ export default function ProductsPage() {
             "Blue epoxy interior moisture barrier",
             "Excellent formability",
             "Lightweight yet durable",
+            "ASTM B-209 standards",
+            "Minimum of 99.0% aluminum",
+            "Precision-formed two piece elbow",
           ],
           sizes: '1/2" to 12" IPS | 1" to 4" insulation',
         },
@@ -105,7 +108,9 @@ export default function ProductsPage() {
             "Attractive textured finish",
             "Same protective coatings as smooth finish",
             "Hides minor imperfections",
-            "Enhanced grip surface",
+            "Reduces visual imperfections",
+            "Most favored",
+            "Resistant to oxidation and corrosion",
           ],
           sizes: '1/2" to 12" IPS | 1" to 4" insulation',
         },
@@ -130,7 +135,7 @@ export default function ProductsPage() {
               North American Made Quality
             </div>
             <Image
-              src="/HVAC-Elbow-Solutions.png"
+              src="/Elbow-Solutions.png"
               alt="Size Guide"
               width={1000}
               height={1000}
@@ -192,9 +197,9 @@ export default function ProductsPage() {
                           <span className="text-sm bg-primary/10 text-primary px-2 py-1 rounded mr-2">
                             {variant.thickness}
                           </span>
-                          <span className="text-sm bg-muted text-foreground px-2 py-1 rounded">
+                          {/* <span className="text-sm bg-muted text-foreground px-2 py-1 rounded">
                             {variant.thicknessRightSideValue}
-                          </span>
+                          </span> */}
                         </div>
                       </div>
                       <div className="p-2 bg-primary/10 rounded-lg">
@@ -259,15 +264,15 @@ export default function ProductsPage() {
 
       {/* Specifications Section */}
       <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto ">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-card rounded-xl shadow-sm p-8 border border-border"
+            className="bg-card md:rounded-xl shadow-sm py-10 border border-border"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-8">
+            <h2 className="text-3xl font-bold text-foreground mb-8 px-4 sm:px-6 lg:px-8">
               Technical Specifications
             </h2>
 

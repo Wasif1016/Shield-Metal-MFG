@@ -31,7 +31,7 @@ export default function Hero() {
           <img
             src="/logo.jpg"
             alt="Manufacturing facility"
-            className="w-full h-full max-h-[250px] md:max-h-[320px] object-contain"
+            className="w-full h-full max-h-[250px] md:max-h-[350px] object-contain"
           />
         </div>
 
@@ -98,8 +98,8 @@ export default function Hero() {
           </div>
           <div className="text-center  md:mr-8 flex items-center flex-col gap-2">
             <CountUp
-              from={0}
-              to={"10000+"}
+              from={"0"}
+              to={"50K+"}
               separator=","
               direction="up"
               duration={1}
@@ -112,7 +112,7 @@ export default function Hero() {
           <div className="text-center flex items-center flex-col gap-2">
             <CountUp
               from={0}
-              to={"100000+"}
+              to={"1M+"}
               separator=","
               direction="up"
               duration={1}
