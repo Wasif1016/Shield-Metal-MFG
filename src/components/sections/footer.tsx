@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between  md:items-center gap-8">
           {/* Logo and Description */}
           <div className="md:col-span-1 max-w-xs">
-            <Link href="/" className="cursor-pointer flex items-center space-x-3 mb-4">
+            <Link href="/" className="cursor-pointer flex flex-col md:flex-row gap-4 md:gap-0 md:items-center space-x-3 mb-4">
               <Image
                 src="/logo.jpg"
                 alt="Shield Metal Logo"
@@ -28,8 +28,8 @@ export default function Footer() {
           </div>
 
           {/* Working Hours */}
-          <div className="md:col-span-1 text-center">
-            <h4 className="text-lg font-semibold mb-4">Working Hours</h4>
+          <div className="md:col-span-1 md:text-center">
+            <h4 className="text-lg font-semibold md:mb-4 mb-2">Working Hours</h4>
             <p className="text-gray-100 text-base">
               Monday - Friday 6.30AM to 2:45PM PST
             </p>
@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright and Legal */}
-        <div className="mt-8 pt-8 border-t border-white/10 text-center">
+        <div className="mt-8 pt-8 border-t border-white/10 md:text-center">
           <p className="text-sm mb-2">
             © {currentYear} Shield Metal Manufacturers Ltd. All Rights Reserved
           </p>
