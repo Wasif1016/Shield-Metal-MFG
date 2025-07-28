@@ -7,13 +7,13 @@ import {
   ClockIcon,
   UserGroupIcon,
   TrophyIcon,
+  CubeIcon,
 } from "@heroicons/react/24/outline";
-import MetallicText from "@/components/metalic-text";
 
 const stats = [
   { id: 1, name: "Years of Experience", value: "56+", icon: ClockIcon },
   { id: 2, name: "Products Manufactured", value: "50K+", icon: ChartBarIcon },
-  { id: 3, name: "Satisfied Customers", value: "1M+", icon: UserGroupIcon },
+  { id: 3, name: "Products Manufactured", value: "1M+", icon: CubeIcon },
 ];
 
 export default function AboutPage() {
@@ -41,7 +41,7 @@ export default function AboutPage() {
             />
             <p className="text-xl text-gray-200 max-w-2xl mx-auto uppercase">
               Your trusted partner in premium metal manufacturing solutions for
-              over 56+ years.
+              over 56+ years
             </p>
           </motion.div>
         </div>
@@ -59,7 +59,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Welcome to Shield Metal Manufacturers LTD.
+                Welcome to Shield Metal Manufacturers LTD
               </h2>
 
               <div className="space-y-6 text-gray-300">

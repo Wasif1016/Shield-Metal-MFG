@@ -1,28 +1,28 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import MetallicText from '../metalic-text';
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import MetallicText from "../metalic-text";
 
 export default function Products() {
   const products = [
     {
-      name: 'Stainless Steel Elbows',
-      image: '/Stainless+Steel+45+-+Shield+Metal+DS.png',
+      name: "Stainless Steel Elbows",
+      image: "/Stainless+Steel+45+-+Shield+Metal+DS.png",
       features: [
-        'High-quality 0.010 Type 304L & 316L stainless steel',
-        'Available in 90° & 45° long and short radius',
+        "High-quality 0.010 Type 304L & 316L stainless steel",
+        "Available in 90° & 45° long and short radius",
         'Fits 13mm (1/2") IPS to 300mm (12") IPS',
         '25mm (1") to 100mm (4") thickness',
       ],
     },
     {
-      name: 'Aluminum Elbows',
-      image: '/Aluminum+90+-+Shield+Metal+DS+homepage.png',
+      name: "Aluminum Elbows",
+      image: "/Aluminum+90+-+Shield+Metal+DS+homepage.png",
       features: [
         'High-quality 1100 alloy in 0.024" thickness',
-        'Available in 90° & 45°, long and short radius',
+        "Available in 90° & 45°, long and short radius",
         'Fits 13mm (1/2") IPS to 300mm (12") IPS',
         '25mm (1") to 100mm (4") thickness',
       ],
@@ -49,9 +49,16 @@ export default function Products() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 max-w-3xl mx-auto"
         >
-          <Image src="/Our-Premium-Products.png" alt="Our-Premium-Products" width={1000} height={1000} className="w-auto h-auto" />
+          <Image
+            src="/Our-Premium-Products.png"
+            alt="Our-Premium-Products"
+            width={1000}
+            height={1000}
+            className="w-auto mx-auto h-auto"
+          />
           <p className="text-xl text-foreground max-w-2xl mx-auto">
-            Precision-engineered solutions crafted with exceptional materials and meticulous attention to detail.
+            Precision-engineered solutions crafted with exceptional materials
+            and meticulous attention to detail
           </p>
         </motion.div>
 
@@ -107,19 +114,18 @@ export default function Products() {
                 </div>
               </div>
 
-
               {/* Learn More Button */}
-             <div className='px-6 pb-6'>
-             <Link
-                href="/products"
-                className="w-full block text-center py-3 px-6 
+              <div className="px-6 pb-6">
+                <Link
+                  href="/products"
+                  className="w-full block text-center py-3 px-6 
                   bg-foreground text-background rounded-lg 
                   hover:bg-foreground/80 transition-colors duration-300 
                   font-semibold"
-              >
-                Learn More
-              </Link>
-             </div>
+                >
+                  Learn More
+                </Link>
+              </div>
             </motion.div>
           ))}
         </div>

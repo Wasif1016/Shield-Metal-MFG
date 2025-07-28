@@ -52,7 +52,7 @@ export function SuccessStories() {
               alt="Client Testimonials"
               width={1000}
               height={1000}
-              className="w-auto h-auto"
+              className="w-auto mx-auto h-auto"
             />
             <motion.p
               className="text-xl max-w-2xl mx-auto"
@@ -60,7 +60,7 @@ export function SuccessStories() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              What our clients say about us Industries
+              What our clients say about us
             </motion.p>
           </div>
 

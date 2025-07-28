@@ -33,7 +33,7 @@ export default function ProductsPage() {
           ],
           thickness: '0.010"',
           thicknessRightSideValue: 'T-304L',
-          features: ["Excellent corrosion resistance", "Weather-tight seal", "Most common fitting", "Excellent corrosion resistance and strength", "Preferred in high traffic areas"],
+          features: ["Excellent corrosion resistance", "Weather-tight seal", "Most common fitting", "Preferred in high traffic areas"],
           sizes: '1/2" to 12" IPS | 1" to 4" insulation',
         },
         {

@@ -82,7 +82,7 @@ export default function SizeGuidePage() {
                   </h2>
                 </div>
                 <div className="space-y-2 text-base text-gray-200">
-                  <p>Available in T-316L & T-304L for:</p>
+                  <p>Available in T-316L & T-304L</p>
                   <ul className="space-y-1.5">
                     <li className="flex items-center gap-2">
                       <ArrowRightIcon className="w-3 h-3 text-blue-500" />

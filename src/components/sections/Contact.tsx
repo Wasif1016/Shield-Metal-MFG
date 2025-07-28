@@ -75,7 +75,7 @@ export default function Contact() {
           />
           <p className="text-xl max-w-2xl mx-auto">
             Ready to discuss your metal fabrication needs? Our team is standing
-            by to provide expert guidance and support.
+            by to provide expert guidance and support
           </p>
         </motion.div>
 
@@ -296,7 +296,7 @@ export default function Contact() {
             Contact Chesnutt
           </h3>
           <p className=" max-w-xl mx-auto mb-6 uppercase">
-            IF YOU ARE IN THE EASTERN OR CENTRAL USA PLEASE CONTACT CHESNUTT INSULATION DIRECTLY.
+            IF YOU ARE IN THE EASTERN OR CENTRAL USA PLEASE CONTACT CHESNUTT INSULATION DIRECTLY
           </p>
 
           <Image

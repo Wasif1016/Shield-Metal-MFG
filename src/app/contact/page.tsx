@@ -79,9 +79,9 @@ export default function ContactPage() {
                   className="object-contain px-8"
                 />
               </div>
-              <p className="text-xl  max-w-2xl mx-auto uppercase">
+              <p className="text-xl  max-w-2xl mx-auto">
                 Have questions about our products? We're here to help and answer
-                any questions you might have.
+                any questions you might have
               </p>
             </motion.div>
           </div>
@@ -119,7 +119,7 @@ export default function ContactPage() {
                   </a>
                 </div>
                 <p className="text-sm mt-2">
-                  Monday - Friday 6.30AM to 3PM PST
+                  Monday - Friday 6.30AM to 2:45PM PST
                 </p>
               </motion.div>
 
@@ -179,7 +179,7 @@ export default function ContactPage() {
                     Get in Touch Directly
                   </h3>
                   <p className="text-lg">
-                    Feel free to contact us directly from these resources or fill out the form.
+                    Feel free to contact us directly from these resources or fill out the form
                   </p>
 
                   <div className="space-y-6">
@@ -423,7 +423,7 @@ export default function ContactPage() {
               </h3>
               <p className="max-w-xl mx-auto mb-6 uppercase">
                 IF YOU ARE IN THE EASTERN OR CENTRAL USA PLEASE CONTACT CHESNUTT
-                INSULATION DIRECTLY.
+                INSULATION DIRECTLY
               </p>
 
               <Image

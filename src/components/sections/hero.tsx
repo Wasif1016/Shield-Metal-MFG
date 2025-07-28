@@ -6,7 +6,7 @@ import MetallicText from "../metalic-text";
 
 export default function Hero() {
   return (
-    <div className="min-h-screen pt-16 pb-24 md:pt-20 md:pb-36 bg-black  flex flex-col items-center justify-center px-6">
+    <div className="min-h-screen pt-20 pb-24 md:pt-20 md:pb-36 bg-black  flex flex-col items-center justify-center px-6">
       {/* Main Content Container */}
       <div className="w-full max-w-[1200px] mx-auto">
         {/* Brand Name */}
@@ -23,7 +23,15 @@ export default function Hero() {
             width={1000}
             height={1000}
             quality={100}
-            className="object-contain "
+            className="object-contain hidden md:block"
+          />
+          <Image
+            src="/PIONEERS-IN-MANUFACTURING-STA-MOBILE.png"
+            alt="Doing Business Across"
+            width={1000}
+            height={1000}
+            quality={100}
+            className="object-contain  block md:hidden"
           />
         </div>
 
@@ -35,7 +43,7 @@ export default function Hero() {
           />
         </div>
 
-        <div className="flex flex-col md:flex-row gap-16 pb-16 max-w-6xl mx-auto items-center justify-center">
+        <div className="flex flex-col md:flex-row gap-16 md:pb-16 pb-8 max-w-6xl mx-auto items-center justify-center">
           <div className="flex-shrink-0 hidden md:block">
             <Link href="/size-guide">
               <Button
@@ -59,25 +67,36 @@ export default function Hero() {
         </div>
 
         <div className="mb-16 mx-auto text-center">
-          <div className="max-w-3xl w-full mx-auto">
+          <div className="max-w-5xl w-full mx-auto">
             {/* - DOING BUSINESS ACROSS NORTH AMERICA - */}
             <Image
               src="/DOING-BUSINESS-ACROSS-NORTH.png"
               alt="Doing Business Across"
               width={1000}
               height={1000}
-              className="w-full h-auto object-contain "
+              className="w-full h-full object-contain hidden md:block"
+            />
+            <Image
+              src="/DOING-BUSINESS-ACROSS-NORTH-MOBILE.png"
+              alt="Doing Business Across"
+              width={1000}
+              height={1000}
+              className="w-full h-full object-contain block md:hidden"
             />
           </div>
-          <div className="w-full max-w-2xl mx-auto -mt-6">
+          <div className="w-full max-w-5xl mx-auto md:-mt-6 mt-4">
             {/* - WE OFFER A COMPLETE LINE OF STAINLESS STEEL & ALUMINUM FITTING COVER BANDING, WING CLIPS, CUSTOM FLAT SHEETS - */}
-            <Image
+            {/* <Image
               src="/WE-OFFER-A-COMPLETE-LINE.png"
               alt="Doing Business Across"
               width={1000}
               height={1000}
-              className="w-full  h-auto object-contain"
-            />
+              className="w-full  h-full object-contain"
+            /> */}
+            <p className="text-white text-base">
+              WE OFFER A COMPLETE LINE OF STAINLESS STEEL & ALUMINUM FITTING
+              COVER BANDING, WING CLIPS, CUSTOM FLAT SHEETS
+            </p>
           </div>
         </div>
 
