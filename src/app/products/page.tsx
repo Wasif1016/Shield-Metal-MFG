@@ -98,7 +98,7 @@ export default function ProductsPage() {
             },
             {
               name: "90° Elbow",
-              image: "/products/Aluminum-90.png",
+              image: "/products/Aluminum-90.webp",
               description: "Decorative 90° angle with stucco pattern",
             },
           ],

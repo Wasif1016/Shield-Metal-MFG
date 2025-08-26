@@ -119,7 +119,7 @@ export default function ContactPage() {
                   </a>
                 </div>
                 <p className="text-sm mt-2">
-                  Monday - Friday 6.30AM to 2:45PM PST
+                  Monday - Friday 6.30AM to 3:00PM PST
                 </p>
               </motion.div>
 
@@ -221,7 +221,7 @@ export default function ContactPage() {
                       <div className="bg-green-500/10 p-3 rounded-xl">
                         <ClockIcon className="w-6 h-6 text-green-500" />
                       </div>
-                      <p className="text-lg">Mon-Fri, 6:30am - 2:45pm PST</p>
+                      <p className="text-lg">Mon-Fri, 6:30am - 3:00PM PST</p>
                     </div>
 
                     <div className="flex items-center space-x-4">

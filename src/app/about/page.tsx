@@ -12,7 +12,7 @@ import {
 
 const stats = [
   { id: 1, name: "Years of Experience", value: "56+", icon: ClockIcon },
-  { id: 2, name: "Products Manufactured", value: "50K+", icon: ChartBarIcon },
+  { id: 2, name: "Projects", value: "50K+", icon: ChartBarIcon },
   { id: 3, name: "Products Manufactured", value: "1M+", icon: CubeIcon },
 ];
 
@@ -144,7 +144,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-10"
+            className="text-center mb-10 md:mb-2"
           >
             <Image
               src="/Our-Core-Values.png"
@@ -154,14 +154,15 @@ export default function AboutPage() {
               quality={100}
               className="mx-auto w-full h-fit object-contain max-w-lg"
             />
-            <div className="mt-2">
+            {/*The principles that guide everything we do at Shield Metal*/}
+            <div className="mt-2 md:-mt-8">
               <Image
-                src="/The-principles-that-guide.png"
+                src="/The-principles-that-guide-3.png"
                 alt="The principles that guide us"
                 width={1000}
                 height={1000}
                 quality={100}
-                className="mx-auto w-full h-fit object-contain hidden md:block max-w-lg"
+                className="mx-auto w-full h-fit object-contain hidden md:block max-w-4xl"
               />
               <Image
                 src="/The-principles-that-guide-mobile.png"

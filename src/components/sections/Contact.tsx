@@ -71,7 +71,7 @@ export default function Contact() {
             alt="Contact Shield Metal"
             width={1000}
             height={1000}
-            className="w-auto h-auto"
+            className="w-full mx-auto object-contain h-auto"
           />
           <p className="text-xl max-w-2xl mx-auto">
             Ready to discuss your metal fabrication needs? Our team is standing
@@ -114,7 +114,7 @@ export default function Contact() {
 
                 <div className="flex items-center space-x-3">
                   <ClockIcon className="w-5 h-5 text-blue-500" />
-                  <p className="">Mon-Fri, 6:30am - 2:45pm PST</p>
+                  <p className="">Mon-Fri, 6:30am - 3:00PM PST</p>
                 </div>
 
                 <div className="flex items-center space-x-3">
